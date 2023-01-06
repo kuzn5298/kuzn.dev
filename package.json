@@ -1,0 +1,64 @@
+{
+    "name": "kuzn.dev",
+    "description": "Personal Website",
+    "version": "0.1.0",
+    "author": {
+        "email": "kuzn5298@gmail.com",
+        "name": "Nikita Kuznetsov",
+        "url": "https://github.com/kuzn5298"
+    },
+    "license": "MIT",
+    "scripts": {
+        "build": "gatsby build",
+        "develop": "gatsby develop",
+        "start": "gatsby develop",
+        "serve": "gatsby serve",
+        "clean": "gatsby clean",
+        "lint": "eslint src/**/*.js",
+        "lint:fix": "eslint --fix src/**/*.js",
+        "prettier": "prettier --check \"src/**/*.{js,md,json}\"",
+        "prettier:fix": "prettier --write \"src/**/*.{js,md,json}\""
+    },
+    "dependencies": {
+        "gatsby": "^5.3.3",
+        "gatsby-plugin-image": "^3.3.2",
+        "gatsby-plugin-manifest": "^5.3.1",
+        "gatsby-plugin-offline": "^6.3.1",
+        "gatsby-plugin-sharp": "^5.3.2",
+        "gatsby-source-filesystem": "^5.3.1",
+        "gatsby-transformer-remark": "^6.3.2",
+        "gatsby-transformer-sharp": "^5.3.1",
+        "lodash": "^4.17.21",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0"
+    },
+    "devDependencies": {
+        "eslint": "^8.31.0",
+        "eslint-config-airbnb": "^19.0.4",
+        "eslint-config-node": "^4.1.0",
+        "eslint-config-prettier": "^8.6.0",
+        "eslint-plugin-import": "^2.26.0",
+        "eslint-plugin-jsx-a11y": "^6.6.1",
+        "eslint-plugin-node": "^11.1.0",
+        "eslint-plugin-prettier": "^4.2.1",
+        "eslint-plugin-react": "^7.31.11",
+        "eslint-plugin-react-hooks": "^4.6.0",
+        "husky": "^8.0.3",
+        "lint-staged": "^13.1.0",
+        "prettier": "^2.8.1"
+    },
+    "keywords": [
+        "gatsby"
+    ],
+    "eslintConfig": {
+        "extends": [
+            "react-app"
+        ]
+    },
+    "lint-staged": {
+        "**/*.{js,jsx,ts,tsx}": [
+            "npm run lint",
+            "npm run prettier"
+        ]
+    }
+}
