@@ -8,17 +8,8 @@
         "ecmaVersion": "latest",
         "sourceType": "module"
     },
-    "extends": [
-        "airbnb",
-        "prettier",
-        "eslint:recommended",
-        "plugin:react/recommended"
-    ],
-    "plugins": [
-        "react",
-        "react-hooks",
-        "prettier"
-    ],
+    "extends": ["airbnb", "prettier", "eslint:recommended", "plugin:react/recommended"],
+    "plugins": ["react", "react-hooks", "prettier"],
     "rules": {
         "prettier/prettier": "error",
         "react/prop-types": "off",
@@ -26,10 +17,7 @@
         "react/jsx-filename-extension": [
             1,
             {
-                "extensions": [
-                    ".js",
-                    ".jsx"
-                ]
+                "extensions": [".js", ".jsx"]
             }
         ],
         "react/function-component-definition": [
@@ -38,7 +26,19 @@
                 "namedComponents": "arrow-function",
                 "unnamedComponents": "arrow-function"
             }
-        ]
-        //   "import/prefer-default-export": "off",
+        ],
+        "import/prefer-default-export": "off"
+    },
+    "settings": {
+        "import/resolver": {
+            "alias": [
+                ["@components", "./src/components"],
+                ["@contexts", "./src/contexts"],
+                ["@content", "./src/content"],
+                ["@hooks", "./src/hooks"],
+                ["@images", "./src/images"],
+                ["@styles", "./src/styles"]
+            ]
+        }
     }
 }
