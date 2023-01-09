@@ -10,10 +10,11 @@
 module.exports = {
     siteMetadata: {
         title: `Nikita Kuznetsov`,
-        description: `I'm software developer`,
+        description: `Nikita Kuznetsov`,
         siteUrl: `https://kuzn.dev/`,
     },
     plugins: [
+        `gatsby-plugin-react-helmet`,
         `gatsby-plugin-image`,
         `gatsby-plugin-sharp`,
         `gatsby-transformer-sharp`,
@@ -25,11 +26,8 @@ module.exports = {
                 short_name: `Nikita Kuznetsov`,
                 start_url: `/`,
                 background_color: `#000000`,
-                // This will impact how browsers show your PWA/website
-                // https://css-tricks.com/meta-theme-color-and-trickery/
-                // theme_color: `#663399`,
                 display: `minimal-ui`,
-                icon: `src/images/icon.png`,
+                icon: `src/images/logo.png`,
             },
         },
         'gatsby-plugin-offline',

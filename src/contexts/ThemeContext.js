@@ -2,15 +2,16 @@ import React, { createContext, useState, useCallback, useMemo } from 'react';
 import { ThemeProvider as StyledThemeProvider } from 'styled-components';
 
 import { GlobalStyle, darkTheme, lightTheme } from '@styles';
+import { THEME } from '@constants';
 
 export const ThemeContext = createContext({});
 
 export const ThemeProvider = ({ children }) => {
-    const [themeName, setThemeName] = useState('light');
+    const [themeName, setThemeName] = useState(THEME.DARK);
 
     const theme = useMemo(() => {
         switch (themeName) {
-            case 'dark':
+            case THEME.DARK:
                 return darkTheme;
             default:
                 return lightTheme;

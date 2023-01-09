@@ -35,6 +35,7 @@
                 ["@components", "./src/components"],
                 ["@contexts", "./src/contexts"],
                 ["@content", "./src/content"],
+                ["@constants", "./src/constants"],
                 ["@hooks", "./src/hooks"],
                 ["@images", "./src/images"],
                 ["@styles", "./src/styles"]

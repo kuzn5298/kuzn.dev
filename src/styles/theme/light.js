@@ -1,3 +1,6 @@
+import _ from 'lodash';
+import defaultTheme from './default';
+
 const lightTheme = {
     palette: {
         background: {
@@ -6,7 +9,10 @@ const lightTheme = {
         text: {
             primary: '#000',
         },
+        primary: {
+            main: '#B3E5FC',
+        },
     },
 };
 
-export default lightTheme;
+export default _.merge({}, defaultTheme, lightTheme);

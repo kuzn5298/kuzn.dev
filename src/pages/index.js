@@ -1,6 +1,8 @@
 import * as React from 'react';
 import { Link } from 'gatsby';
 import { useTheme } from '@hooks';
+import { Layout } from '@components/app';
+import { THEME } from '@constants';
 
 const samplePageLinks = [
     { text: 'About', url: 'about' },
@@ -12,16 +14,16 @@ const IndexPage = () => {
     const { setThemeByName } = useTheme();
 
     return (
-        <div>
+        <Layout>
             <div>
                 <h1>
                     Welcome to <b>Gatsby!</b>
                 </h1>
                 <div>
-                    <button type="button" onClick={() => setThemeByName('light')}>
+                    <button type="button" onClick={() => setThemeByName(THEME.LIGHT)}>
                         light
                     </button>
-                    <button type="button" onClick={() => setThemeByName('dark')}>
+                    <button type="button" onClick={() => setThemeByName(THEME.DARK)}>
                         dark
                     </button>
                 </div>
@@ -36,7 +38,7 @@ const IndexPage = () => {
                     <br />
                 </p>
             </div>
-        </div>
+        </Layout>
     );
 };
 

@@ -1,28 +1,31 @@
 import React from 'react';
 import _ from 'lodash';
 import { graphql, Link } from 'gatsby';
+import { Layout } from '@components/app';
 
 const ProjectsPage = ({ data }) => {
     const projects = data.projects.nodes;
     return (
-        <div>
-            <h1>Projects</h1>
-            <p>Welcome to Projects page</p>
-            <Link to="/">Go back to the homepage</Link>
-            <hr />
-            {projects.map((project, i) => {
-                const link = `/projects/${_.kebabCase(project.frontmatter.title)}`;
-                return (
-                    <div key={project.id}>
-                        <b>
-                            {i}) {project.frontmatter.title}
-                        </b>
-                        <i>{project.frontmatter.date}</i>
-                        <Link to={link}>go to project</Link>
-                    </div>
-                );
-            })}
-        </div>
+        <Layout title="Projects">
+            <div>
+                <h1>Projects</h1>
+                <p>Welcome to Projects page</p>
+                <Link to="/">Go back to the homepage</Link>
+                <hr />
+                {projects.map((project, i) => {
+                    const link = `/projects/${_.kebabCase(project.frontmatter.title)}`;
+                    return (
+                        <div key={project.id}>
+                            <b>
+                                {i}) {project.frontmatter.title}
+                            </b>
+                            <i>{project.frontmatter.date}</i>
+                            <Link to={link}>go to project</Link>
+                        </div>
+                    );
+                })}
+            </div>
+        </Layout>
     );
 };
 
