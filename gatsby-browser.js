@@ -4,6 +4,8 @@
  * See: https://www.gatsbyjs.com/docs/reference/config-files/gatsby-browser/
  */
 
-import { RootWrapper } from '@components/app';
+import { PageWrapper, RootWrapper } from '@components/app';
 
 export const wrapRootElement = RootWrapper;
+
+export const wrapPageElement = PageWrapper;

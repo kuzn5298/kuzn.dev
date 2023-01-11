@@ -4,13 +4,13 @@ import defaultTheme from './default';
 const lightTheme = {
     palette: {
         background: {
-            default: '#fff',
+            default: '#eee',
         },
         text: {
-            primary: '#000',
+            primary: '#111',
         },
         primary: {
-            main: '#B3E5FC',
+            main: '#03a9f4',
         },
     },
 };

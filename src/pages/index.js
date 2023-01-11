@@ -1,7 +1,7 @@
 import * as React from 'react';
-import { Link } from 'gatsby';
 import { useTheme } from '@hooks';
-import { Layout } from '@components/app';
+import { Button, Link } from '@components/core';
+import { MoonIcon, SunIcon } from '@components/icons';
 import { THEME } from '@constants';
 
 const samplePageLinks = [
@@ -14,32 +14,34 @@ const IndexPage = () => {
     const { setThemeByName } = useTheme();
 
     return (
-        <Layout>
+        <div>
+            <h1>
+                Welcome to <b>Gatsby!</b>
+            </h1>
             <div>
-                <h1>
-                    Welcome to <b>Gatsby!</b>
-                </h1>
-                <div>
-                    <button type="button" onClick={() => setThemeByName(THEME.LIGHT)}>
-                        light
-                    </button>
-                    <button type="button" onClick={() => setThemeByName(THEME.DARK)}>
-                        dark
-                    </button>
-                </div>
-                <p>
-                    <b>Example pages:</b>
-                    {samplePageLinks.map((link, i) => (
-                        <React.Fragment key={link.url}>
-                            <Link to={link.url}>{link.text}</Link>
-                            {i !== samplePageLinks.length - 1 && <> · </>}
-                        </React.Fragment>
-                    ))}
-                    <br />
-                </p>
+                <Button onClick={() => setThemeByName(THEME.LIGHT)} startIcon={<SunIcon />}>
+                    light
+                </Button>
+                <Button onClick={() => setThemeByName(THEME.DARK)} endIcon={<MoonIcon />}>
+                    dark
+                </Button>
             </div>
-        </Layout>
+            <p>
+                <b>Example pages:</b>
+                {samplePageLinks.map((link, i) => (
+                    <React.Fragment key={link.url}>
+                        <Link to={link.url}>{link.text}</Link>
+                        {i !== samplePageLinks.length - 1 && <> · </>}
+                    </React.Fragment>
+                ))}
+                <br />
+            </p>
+        </div>
     );
+};
+
+IndexPage.settings = {
+    backgroundTitle: 'Hello',
 };
 
 export default IndexPage;

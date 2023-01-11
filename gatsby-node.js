@@ -11,12 +11,12 @@ const _ = require('lodash');
  */
 exports.createPages = async ({ actions, graphql }) => {
     const { createPage } = actions;
-    const projectTemplate = path.resolve(`src/templates/project.js`);
+    const workTemplate = path.resolve(`src/templates/work.js`);
 
     const result = await graphql(`
         {
-            projectsRemark: allMarkdownRemark(
-                filter: { fileAbsolutePath: { regex: "/content/projects/" } }
+            worksRemark: allMarkdownRemark(
+                filter: { fileAbsolutePath: { regex: "/content/works/" } }
                 sort: { frontmatter: { date: DESC } }
                 limit: 1000
             ) {
@@ -32,12 +32,12 @@ exports.createPages = async ({ actions, graphql }) => {
         }
     `);
 
-    const projects = result.data.projectsRemark.edges;
+    const works = result.data.worksRemark.edges;
 
-    projects.forEach(({ node }) => {
+    works.forEach(({ node }) => {
         createPage({
-            path: `/projects/${_.kebabCase(node.frontmatter.title)}`,
-            component: projectTemplate,
+            path: `/works/${_.kebabCase(node.frontmatter.title)}`,
+            component: workTemplate,
             context: {
                 id: node.id,
             },

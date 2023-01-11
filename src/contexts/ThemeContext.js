@@ -4,7 +4,11 @@ import { ThemeProvider as StyledThemeProvider } from 'styled-components';
 import { GlobalStyle, darkTheme, lightTheme } from '@styles';
 import { THEME } from '@constants';
 
-export const ThemeContext = createContext({});
+export const ThemeContext = createContext({
+    theme: lightTheme,
+    themeName: THEME.LIGHT,
+    setThemeByName: () => {},
+});
 
 export const ThemeProvider = ({ children }) => {
     const [themeName, setThemeName] = useState(THEME.DARK);
