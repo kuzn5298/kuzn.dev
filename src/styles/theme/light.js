@@ -4,10 +4,10 @@ import defaultTheme from './default';
 const lightTheme = {
     palette: {
         background: {
-            default: '#eee',
+            default: '#f2f2f2',
         },
         text: {
-            primary: '#111',
+            primary: '#1D1C1C',
         },
         primary: {
             main: '#03a9f4',

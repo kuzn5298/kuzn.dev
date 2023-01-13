@@ -11,6 +11,7 @@ const PageWrapper = ({ element, props }) => {
     const actualBackgroundTitle = _.isFunction(backgroundTitle)
         ? backgroundTitle(props)
         : backgroundTitle;
+
     return (
         <PageWrapperContainer>
             <Head title={actualTitle} />

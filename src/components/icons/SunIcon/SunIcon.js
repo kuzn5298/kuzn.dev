@@ -1,5 +1,5 @@
 import React from 'react';
-import SvgIcon from '../SvgIcon';
+import { SvgIcon } from '@components/core';
 
 const SunIcon = (props) => (
     <SvgIcon {...props}>

@@ -1,17 +1,17 @@
 import styled from 'styled-components';
 
 const BackgroundTitleContainer = styled.div`
-    position: fixed;
+    position: absolute;
     top: 0;
     bottom: 0;
     right: 0;
     left: 0;
     user-select: none;
-    z-index: -1;
+    z-index: ${({ theme }) => theme.zIndex.backgroundTitle};
 
     .title {
         position: absolute;
-        right: 2rem;
+        right: var(--app-width-padding);
         bottom: -5%;
         white-space: nowrap;
         text-transform: uppercase;

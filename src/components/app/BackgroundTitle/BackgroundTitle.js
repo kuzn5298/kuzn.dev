@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react';
+import React, { useCallback, useLayoutEffect, useRef, useState } from 'react';
 import BackgroundTitleContainer from './BackgroundTitle.styled';
 
 const BackgroundTitle = ({ title }) => {
@@ -21,10 +21,8 @@ const BackgroundTitle = ({ title }) => {
     }, []);
 
     // FIXME: calculate correct fontSize
-    useEffect(() => {
-        setTimeout(() => {
-            handleResize();
-        }, 10);
+    useLayoutEffect(() => {
+        handleResize();
     }, [title, handleResize]);
 
     useLayoutEffect(() => {

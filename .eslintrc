@@ -8,7 +8,13 @@
         "ecmaVersion": "latest",
         "sourceType": "module"
     },
-    "extends": ["airbnb", "prettier", "eslint:recommended", "plugin:react/recommended"],
+    "extends": [
+        "airbnb",
+        "prettier",
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "plugin:react-hooks/recommended"
+    ],
     "plugins": ["react", "react-hooks", "prettier"],
     "rules": {
         "prettier/prettier": "error",

@@ -2,9 +2,11 @@ import { createGlobalStyle } from 'styled-components';
 import fonts from './fonts';
 import NormalizeStyles from './NormalizeStyles';
 import CustomStyles from './CustomStyles';
+import variables from './variables';
 
 const GlobalStyle = createGlobalStyle`
     ${fonts};
+    ${variables}
     ${NormalizeStyles};
     ${CustomStyles};
 
