@@ -23,10 +23,10 @@ module.exports = {
             resolve: `gatsby-plugin-manifest`,
             options: {
                 name: `Nikita Kuznetsov`,
-                short_name: `Nikita Kuznetsov`,
+                short_name: `NK`,
                 start_url: `/`,
                 background_color: `#1D1C1C`,
-                display: `minimal-ui`,
+                display: `standalone`,
                 icon: `src/images/logo.svg`,
             },
         },
