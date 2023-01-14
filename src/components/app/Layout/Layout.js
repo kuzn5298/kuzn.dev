@@ -3,7 +3,7 @@ import { useMedia } from '@hooks';
 import Content from '../Content';
 import Header from '../Header';
 import SideBar from '../SideBar';
-import LayoutContainer from './Layout.styled';
+import { LayoutContainer } from './Layout.styled';
 
 const Layout = ({ children }) => {
     const isMobile = useMedia((theme) => theme.breakpoints.down('sm'));

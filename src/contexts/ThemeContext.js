@@ -1,13 +1,13 @@
 import React, { createContext, useState, useCallback, useMemo } from 'react';
 import { ThemeProvider as StyledThemeProvider } from 'styled-components';
-
-import { GlobalStyle, darkTheme, lightTheme } from '@styles';
 import { THEME } from '@constants';
+import { GlobalStyle, darkTheme, lightTheme } from '@styles';
+import { getUsedThemeId, isValidThemeId, setThemeIdToLocalStorages } from '@utils';
 
 export const ThemeContext = createContext({});
 
 export const ThemeProvider = ({ children }) => {
-    const [themeId, setThemeId] = useState(THEME.DARK);
+    const [themeId, setThemeId] = useState(getUsedThemeId);
 
     const theme = useMemo(() => {
         switch (themeId) {
@@ -19,7 +19,10 @@ export const ThemeProvider = ({ children }) => {
     }, [themeId]);
 
     const setThemeById = useCallback((newThemeId) => {
-        setThemeId(newThemeId);
+        if (isValidThemeId(newThemeId)) {
+            setThemeIdToLocalStorages(newThemeId);
+            setThemeId(newThemeId);
+        }
     }, []);
 
     const contextValue = useMemo(

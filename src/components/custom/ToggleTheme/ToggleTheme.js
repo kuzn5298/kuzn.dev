@@ -1,7 +1,7 @@
 import React from 'react';
 import { IconButton } from '@components/core';
-import { useTheme } from '@hooks';
 import { NEXT_THEME } from '@constants';
+import { useTheme } from '@hooks';
 
 const ToggleTheme = (props) => {
     const { themeId, setThemeById, theme } = useTheme();

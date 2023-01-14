@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import ButtonContainer from './Button.styled';
+import { ButtonContainer } from './Button.styled';
 
 const Button = ({ startIcon: StartIcon, endIcon: EndIcon, children, size, ...props }) => (
     <ButtonContainer size={size} {...props}>

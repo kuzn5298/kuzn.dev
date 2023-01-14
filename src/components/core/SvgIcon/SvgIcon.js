@@ -59,8 +59,6 @@ const SvgIcon = styled.svg`
     ${colorBlock}
 `;
 
-export default SvgIcon;
-
 SvgIcon.propTypes = {
     children: PropTypes.node,
     className: PropTypes.string,
@@ -78,3 +76,5 @@ SvgIcon.defaultProps = {
     fontSize: 'inherit',
     viewBox: '0 0 24 24',
 };
+
+export default SvgIcon;

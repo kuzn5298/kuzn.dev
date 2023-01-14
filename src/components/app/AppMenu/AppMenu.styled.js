@@ -8,8 +8,8 @@ export const AppMenuContainer = styled.div`
     bottom: 0;
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
-    padding: 0 1rem;
+    gap: 2rem;
+    padding: 0 var(--app-width-padding);
     background-color: ${({ theme }) => theme.palette.background.default};
     z-index: ${({ theme }) => theme.zIndex.appMenu};
 `;
@@ -18,7 +18,7 @@ export const AppMenuHeader = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1.5rem 0;
+    padding: var(--header-height-padding) var(--header-width-padding); ;
 `;
 
 export const AppMenuContent = styled.div`
@@ -42,13 +42,12 @@ export const AppMenuNavigation = styled.div`
     flex-direction: column;
     gap: 1.5rem;
     flex: 1;
-    margin-top: 3rem;
 `;
 
 export const AppMenuActions = styled.div`
     position: absolute;
     right: 0;
-    top: 4.5rem;
+    top: 0;
 `;
 
 export const AppMenuResume = styled.div`
@@ -59,6 +58,6 @@ export const AppMenuResume = styled.div`
 export const AppMenuSocial = styled.div`
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 1.5rem;
-    margin-bottom: 2rem;
 `;

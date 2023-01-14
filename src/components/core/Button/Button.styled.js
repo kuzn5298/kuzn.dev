@@ -1,37 +1,31 @@
 import styled, { css } from 'styled-components';
 
-const smallButton = css`
-    gap: 0.5rem;
-    padding: 0.25rem 0.75rem;
-    font-size: 0.75rem;
-`;
-
-const mediumButton = css`
-    gap: 1rem;
-    padding: 0.5rem 1.5rem;
-    font-size: 1rem;
-`;
-
-const largeButton = css`
-    gap: 1.5rem;
-    padding: 0.75rem 2.25rem;
-    font-size: 1.25rem;
-`;
-
 const sizeBlock = css`
     ${({ size }) => {
         switch (size) {
             case 'small':
-                return smallButton;
+                return css`
+                    gap: 0.5rem;
+                    padding: 0.25rem 0.75rem;
+                    font-size: 0.75rem;
+                `;
             case 'large':
-                return largeButton;
+                return css`
+                    gap: 1.5rem;
+                    padding: 0.75rem 2.25rem;
+                    font-size: 1.25rem;
+                `;
             default:
-                return mediumButton;
+                return css`
+                    gap: 1rem;
+                    padding: 0.5rem 1.5rem;
+                    font-size: 1rem;
+                `;
         }
     }}
 `;
 
-const ButtonContainer = styled.button`
+export const ButtonContainer = styled.button`
     ${sizeBlock}
 
     position: relative;
@@ -84,5 +78,3 @@ const ButtonContainer = styled.button`
         height: 100%;
     }
 `;
-
-export default ButtonContainer;

@@ -67,7 +67,7 @@ const hoverColorBlock = css`
     }
 `;
 
-const IconButtonContainer = styled.button`
+export const IconButtonContainer = styled.button`
     position: relative;
     display: inline-flex;
     align-items: center;
@@ -89,5 +89,3 @@ const IconButtonContainer = styled.button`
     ${colorBlock}
     ${hoverColorBlock}
 `;
-
-export default IconButtonContainer;

@@ -3,7 +3,7 @@ import _ from 'lodash';
 import BackgroundTitle from '../BackgroundTitle';
 import Head from '../Head';
 import Layout from '../Layout';
-import PageWrapperContainer from './PageWrapper.styled';
+import { PageWrapperContainer } from './PageWrapper.styled';
 
 const PageWrapper = ({ element, props }) => {
     const { title, backgroundTitle, withLayout = true } = element?.type?.settings ?? {};

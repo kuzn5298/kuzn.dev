@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const LogoContainer = styled.span`
+export const LogoContainer = styled.span`
     font-size: 1.25rem;
     font-weight: 700;
     text-transform: uppercase;
@@ -11,5 +11,3 @@ const LogoContainer = styled.span`
         color: ${({ theme }) => theme.palette.primary.main};
     }
 `;
-
-export default LogoContainer;

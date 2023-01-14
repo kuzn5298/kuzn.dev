@@ -1,6 +1,11 @@
-import React from 'react';
-import ContentContainer from './Content.styled';
+import styled from 'styled-components';
 
-const Content = ({ children }) => <ContentContainer>{children}</ContentContainer>;
+const Content = styled.main`
+    flex: 1;
+    box-sizing: border-box;
+    overflow: auto;
+    padding: var(--content-height-padding)
+        calc(var(--app-width-padding) + var(--content-width-padding));
+`;
 
 export default Content;

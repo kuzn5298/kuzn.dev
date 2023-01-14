@@ -1,5 +1,5 @@
 import React from 'react';
-import LogoContainer from './Logo.styled';
+import { LogoContainer } from './Logo.styled';
 
 const Logo = (props) => (
     <LogoContainer {...props}>

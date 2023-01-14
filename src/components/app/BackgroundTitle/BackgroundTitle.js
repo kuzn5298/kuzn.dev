@@ -1,5 +1,8 @@
 import React, { useCallback, useLayoutEffect, useRef, useState } from 'react';
-import BackgroundTitleContainer from './BackgroundTitle.styled';
+import {
+    BackgroundTitleContainer,
+    BackgroundTitle as BackgroundTitleStyle,
+} from './BackgroundTitle.styled';
 
 const BackgroundTitle = ({ title }) => {
     const [fontSize, setFontSize] = useState();
@@ -39,9 +42,9 @@ const BackgroundTitle = ({ title }) => {
 
     return (
         <BackgroundTitleContainer ref={containerRef}>
-            <span ref={titleRef} className="title" style={{ fontSize }}>
+            <BackgroundTitleStyle ref={titleRef} className="title" style={{ fontSize }}>
                 {title}
-            </span>
+            </BackgroundTitleStyle>
         </BackgroundTitleContainer>
     );
 };

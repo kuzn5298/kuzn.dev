@@ -4,6 +4,4 @@
  * See: https://www.gatsbyjs.com/docs/reference/config-files/gatsby-ssr/
  */
 
-// You can delete this file if you're not using it
-
 export const wrapPageElement = () => null;

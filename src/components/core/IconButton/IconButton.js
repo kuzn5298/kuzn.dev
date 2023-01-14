@@ -1,11 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import IconButtonContainer from './IconButton.styled';
+import { IconButtonContainer } from './IconButton.styled';
 
 const IconButton = (props) => <IconButtonContainer {...props} />;
-
-export default IconButton;
 
 IconButton.propTypes = {
     color: PropTypes.oneOfType([PropTypes.oneOf(['inherit', 'primary']), PropTypes.string]),
@@ -21,3 +19,5 @@ IconButton.defaultProps = {
     hoverColor: 'inherit',
     size: 'inherit',
 };
+
+export default IconButton;

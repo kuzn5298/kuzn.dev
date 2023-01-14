@@ -17,3 +17,7 @@ export const NEXT_THEME = {
         icon: MoonIcon,
     },
 };
+
+export const DEFAULT_THEME_ID = THEME.DARK;
+
+export const THEME_LOCAL_STORAGE = 'theme';

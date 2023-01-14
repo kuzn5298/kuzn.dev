@@ -19,7 +19,7 @@ const fontSizeBlock = css`
                 `;
             case 'large':
                 return css`
-                    font-size: 1.25rem;
+                    font-size: 1.5rem;
                 `;
             default:
                 return css`
@@ -55,8 +55,6 @@ const Link = styled(GatsbyLink)`
     text-transform: uppercase;
 `;
 
-export default Link;
-
 Link.propTypes = {
     children: PropTypes.node,
     className: PropTypes.string,
@@ -73,3 +71,5 @@ Link.defaultProps = {
     color: 'inherit',
     fontSize: 'medium',
 };
+
+export default Link;

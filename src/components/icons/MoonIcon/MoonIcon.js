@@ -3,7 +3,7 @@ import { SvgIcon } from '@components/core';
 
 const MoonIcon = (props) => (
     <SvgIcon {...props}>
-        <g fill="none" stroke="currentColor" strokeWidth="1.5">
+        <g fill="none" stroke="currentColor" strokeWidth="2">
             <circle cx="12" cy="12" r="10" />
             <path d="M7.633 3.067A3.001 3.001 0 1 1 4.017 6.32M22 13.05a3.5 3.5 0 1 0-3 5.914" />
             <path
