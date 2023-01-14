@@ -7,28 +7,28 @@ import { THEME } from '@constants';
 export const ThemeContext = createContext({});
 
 export const ThemeProvider = ({ children }) => {
-    const [themeName, setThemeName] = useState(THEME.DARK);
+    const [themeId, setThemeId] = useState(THEME.DARK);
 
     const theme = useMemo(() => {
-        switch (themeName) {
+        switch (themeId) {
             case THEME.DARK:
                 return darkTheme;
             default:
                 return lightTheme;
         }
-    }, [themeName]);
+    }, [themeId]);
 
-    const setThemeByName = useCallback((newThemeName) => {
-        setThemeName(newThemeName);
+    const setThemeById = useCallback((newThemeId) => {
+        setThemeId(newThemeId);
     }, []);
 
     const contextValue = useMemo(
         () => ({
             theme,
-            themeName,
-            setThemeByName,
+            themeId,
+            setThemeById,
         }),
-        [theme, themeName, setThemeByName]
+        [theme, themeId, setThemeById]
     );
 
     return (

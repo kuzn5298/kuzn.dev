@@ -46,6 +46,7 @@ const ButtonContainer = styled.button`
     background-color: transparent;
     color: ${({ theme }) => theme.palette.text.primary};
     text-transform: uppercase;
+    line-height: 1;
 
     &::after,
     &:before {

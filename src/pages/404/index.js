@@ -10,6 +10,7 @@ const NotFoundPage = () => (
 
 NotFoundPage.settings = {
     title: '404',
+    withLayout: false,
 };
 
 export default NotFoundPage;

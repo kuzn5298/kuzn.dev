@@ -6,7 +6,7 @@ import Layout from '../Layout';
 import PageWrapperContainer from './PageWrapper.styled';
 
 const PageWrapper = ({ element, props }) => {
-    const { title, backgroundTitle } = element?.type?.settings ?? {};
+    const { title, backgroundTitle, withLayout = true } = element?.type?.settings ?? {};
     const actualTitle = _.isFunction(title) ? title(props) : title;
     const actualBackgroundTitle = _.isFunction(backgroundTitle)
         ? backgroundTitle(props)
@@ -15,7 +15,7 @@ const PageWrapper = ({ element, props }) => {
     return (
         <PageWrapperContainer>
             <Head title={actualTitle} />
-            <Layout>{element}</Layout>
+            {withLayout ? <Layout>{element}</Layout> : element}
             <BackgroundTitle title={actualBackgroundTitle} />
         </PageWrapperContainer>
     );

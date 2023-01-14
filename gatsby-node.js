@@ -56,6 +56,7 @@ exports.onCreateWebpackConfig = ({ actions }) => {
                 '@hooks': path.resolve(__dirname, 'src/hooks'),
                 '@images': path.resolve(__dirname, 'src/images'),
                 '@styles': path.resolve(__dirname, 'src/styles'),
+                '@utils': path.resolve(__dirname, 'src/utils'),
             },
         },
     });

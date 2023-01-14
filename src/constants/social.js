@@ -1,3 +1,5 @@
+import { GithubIcon, InstagramIcon, LinkedinIcon, MailIcon, TwitterIcon } from '@components/icons';
+
 export const SOCIAL = {
     GITHUB: 'github',
     LINKEDIN: 'linkedin',
@@ -10,26 +12,31 @@ export const SOCIAL_LIST = [
     {
         id: SOCIAL.GITHUB,
         name: 'GitHub',
-        to: 'https://github.com/kuzn5298',
+        icon: GithubIcon,
+        link: 'https://github.com/kuzn5298',
     },
     {
         id: SOCIAL.LINKEDIN,
         name: 'Linkedin',
-        to: 'https://www.linkedin.com/in/kuzn5298/',
+        icon: LinkedinIcon,
+        link: 'https://www.linkedin.com/in/kuzn5298/',
     },
     {
         id: SOCIAL.INSTAGRAM,
         name: 'Instagram',
-        to: 'https://www.instagram.com/kuzn5298/',
+        icon: InstagramIcon,
+        link: 'https://www.instagram.com/kuzn5298/',
     },
     {
         id: SOCIAL.TWITTER,
         name: 'Twitter',
-        to: 'https://twitter.com/kuzn5298',
+        icon: TwitterIcon,
+        link: 'https://twitter.com/kuzn5298',
     },
     {
         id: SOCIAL.EMAIL,
         name: 'Email',
-        to: 'mailto:kuzn5298@gmail.com',
+        icon: MailIcon,
+        link: 'mailto:kuzn5298@gmail.com',
     },
 ];

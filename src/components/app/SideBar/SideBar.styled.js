@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const SideBarContainer = styled.aside`
+export const SideBarContainer = styled.aside`
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -10,4 +10,14 @@ const SideBarContainer = styled.aside`
     left: var(--app-width-padding);
 `;
 
-export default SideBarContainer;
+export const SideBarSocial = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+`;
+
+export const SideBarActions = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+`;

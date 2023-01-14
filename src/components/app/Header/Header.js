@@ -1,26 +1,31 @@
 import React from 'react';
-import { navigate } from 'gatsby';
 import { Logo, ResumeButton } from '@components/custom';
-import { APP_ROUTES } from '@constants/routes';
+import { IconButton } from '@components/core';
+import { MenuIcon } from '@components/icons';
 import { useMedia } from '@hooks';
+import { goHome } from '@utils';
 import Navigation from '../Navigation';
-import HeaderContainer from './Header.styled';
+import AppMenu from '../AppMenu';
+import { HeaderContainer, HeaderActions } from './Header.styled';
 
 const Header = ({ className }) => {
     const isMobile = useMedia((theme) => theme.breakpoints.down('sm'));
-
-    const goHome = () => {
-        navigate(APP_ROUTES.HOME);
-    };
 
     return (
         <HeaderContainer className={className}>
             <Logo onClick={goHome} />
             {!isMobile && (
-                <div className="actions">
+                <HeaderActions>
                     <Navigation />
                     <ResumeButton />
-                </div>
+                </HeaderActions>
+            )}
+            {isMobile && (
+                <AppMenu>
+                    <IconButton size="large">
+                        <MenuIcon />
+                    </IconButton>
+                </AppMenu>
             )}
         </HeaderContainer>
     );

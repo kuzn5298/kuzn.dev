@@ -1,13 +1,70 @@
 import styled, { css } from 'styled-components';
 
-const hoverBlock = css`
-    ${({ hover }) =>
-        hover &&
-        css`
-            &:hover {
-                color: ${({ theme }) => theme.palette.primary.main};
+const sizeBlock = css`
+    ${({ size }) => {
+        switch (size) {
+            case 'inherit':
+                return css`
+                    font-size: inherit;
+                `;
+            case 'small':
+                return css`
+                    font-size: 1rem;
+                `;
+            case 'medium':
+                return css`
+                    font-size: 1.5rem;
+                `;
+            case 'large':
+                return css`
+                    font-size: 2rem;
+                `;
+            default:
+                return css`
+                    font-size: ${size};
+                `;
+        }
+    }}
+`;
+
+const colorBlock = css`
+    ${({ color }) => {
+        switch (color) {
+            case 'inherit':
+                return css`
+                    color: inherit;
+                `;
+            case 'primary':
+                return css`
+                    color: ${({ theme }) => theme.palette.primary.main};
+                `;
+            default:
+                return css`
+                    color: ${color};
+                `;
+        }
+    }}
+`;
+
+const hoverColorBlock = css`
+    &:hover {
+        ${({ hoverColor }) => {
+            switch (hoverColor) {
+                case 'inherit':
+                    return css`
+                        color: inherit;
+                    `;
+                case 'primary':
+                    return css`
+                        color: ${({ theme }) => theme.palette.primary.main};
+                    `;
+                default:
+                    return css`
+                        color: ${hoverColor};
+                    `;
             }
-        `}
+        }}
+    }
 `;
 
 const IconButtonContainer = styled.button`
@@ -26,11 +83,11 @@ const IconButtonContainer = styled.button`
     vertical-align: middle;
     text-decoration: none;
     flex: 0 0 auto;
-    color: inherit;
     overflow: hidden;
-    font-size: 1.5rem;
 
-    ${hoverBlock}
+    ${sizeBlock}
+    ${colorBlock}
+    ${hoverColorBlock}
 `;
 
 export default IconButtonContainer;

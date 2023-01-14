@@ -1,29 +1,24 @@
 import React from 'react';
-import { MoonIcon, SunIcon } from '@components/icons';
 import { IconButton } from '@components/core';
 import { useTheme } from '@hooks';
-import { THEME } from '@constants';
+import { NEXT_THEME } from '@constants';
 
-const TOGGLE_THEME = {
-    [THEME.LIGHT]: THEME.DARK,
-    [THEME.DARK]: THEME.LIGHT,
-};
-
-const THEME_ICON = {
-    [THEME.LIGHT]: <SunIcon />,
-    [THEME.DARK]: <MoonIcon />,
-};
-
-const ToggleTheme = () => {
-    const { themeName, setThemeByName } = useTheme();
+const ToggleTheme = (props) => {
+    const { themeId, setThemeById, theme } = useTheme();
+    const { id, icon: Icon } = NEXT_THEME[themeId];
 
     const handleTheme = () => {
-        setThemeByName(TOGGLE_THEME[themeName]);
+        setThemeById(id);
     };
 
     return (
-        <IconButton onClick={handleTheme} hover>
-            {THEME_ICON[TOGGLE_THEME[themeName]]}
+        <IconButton
+            onClick={handleTheme}
+            size="medium"
+            hoverColor={theme.palette.icon.theme[id]}
+            {...props}
+        >
+            <Icon />
         </IconButton>
     );
 };

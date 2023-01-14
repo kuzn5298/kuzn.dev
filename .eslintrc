@@ -45,7 +45,8 @@
                 ["@constants", "./src/constants"],
                 ["@hooks", "./src/hooks"],
                 ["@images", "./src/images"],
-                ["@styles", "./src/styles"]
+                ["@styles", "./src/styles"],
+                ["@utils", "./src/utils"]
             ]
         }
     }

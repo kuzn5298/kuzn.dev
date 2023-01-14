@@ -7,8 +7,6 @@ const WorksPage = ({ data }) => {
     return (
         <div>
             <h1>Works</h1>
-            <p>Welcome to Projects page</p>
-            <Link to="/">Go back to the homepage</Link>
             <hr />
             {works.map((work, i) => {
                 const link = `/works/${_.kebabCase(work.frontmatter.title)}`;

@@ -4,7 +4,8 @@ const ContentContainer = styled.main`
     flex: 1;
     box-sizing: border-box;
     overflow: auto;
-    padding: 1.5rem var(--content-width-padding);
+    padding: 0 var(--content-width-padding);
+    padding-bottom: 1.5rem;
 `;
 
 export default ContentContainer;
