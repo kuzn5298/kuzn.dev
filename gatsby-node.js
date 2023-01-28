@@ -46,11 +46,11 @@ exports.createPages = async ({ actions, graphql }) => {
 };
 
 exports.onCreatePage = ({ page, actions }) => {
-    const { deletePage, createPage } = actions;
+    const { createPage } = actions;
 
     return new Promise((resolve) => {
         if (page.componentPath === `${__dirname}/src/pages/index/index.js`) {
-            deletePage(page);
+            // deletePage(page);
 
             createPage({
                 ...page,
