@@ -45,6 +45,23 @@ exports.createPages = async ({ actions, graphql }) => {
     });
 };
 
+exports.onCreatePage = ({ page, actions }) => {
+    const { deletePage, createPage } = actions;
+
+    return new Promise((resolve) => {
+        if (page.componentPath === `${__dirname}/src/pages/index/index.js`) {
+            deletePage(page);
+
+            createPage({
+                ...page,
+                path: '/',
+            });
+        }
+
+        resolve();
+    });
+};
+
 exports.onCreateWebpackConfig = ({ actions }) => {
     actions.setWebpackConfig({
         resolve: {

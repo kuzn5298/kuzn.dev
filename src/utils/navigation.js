@@ -10,3 +10,7 @@ export const openURL = (url, target = '_blank') => {
 export const goHome = () => {
     navigate(APP_ROUTES.HOME);
 };
+
+export const goAbout = () => {
+    navigate(APP_ROUTES.ABOUT);
+};
