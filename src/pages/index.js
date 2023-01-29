@@ -1,8 +1,8 @@
+import React from 'react';
 import { graphql } from 'gatsby';
-import * as React from 'react';
 import { goAbout } from '@utils/navigation';
-import { ArrowButton } from './components';
-import { IndexContainer, SummarySection } from './style';
+import { ArrowButton } from './index/components';
+import { IndexContainer, SummarySection } from './index/style';
 
 const IndexPage = ({ data }) => (
     <IndexContainer>

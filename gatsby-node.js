@@ -45,23 +45,6 @@ exports.createPages = async ({ actions, graphql }) => {
     });
 };
 
-exports.onCreatePage = ({ page, actions }) => {
-    const { createPage } = actions;
-
-    return new Promise((resolve) => {
-        if (page.componentPath === `${__dirname}/src/pages/index/index.js`) {
-            // deletePage(page);
-
-            createPage({
-                ...page,
-                path: '/',
-            });
-        }
-
-        resolve();
-    });
-};
-
 exports.onCreateWebpackConfig = ({ actions }) => {
     actions.setWebpackConfig({
         resolve: {
@@ -74,6 +57,7 @@ exports.onCreateWebpackConfig = ({ actions }) => {
                 '@images': path.resolve(__dirname, 'src/images'),
                 '@styles': path.resolve(__dirname, 'src/styles'),
                 '@utils': path.resolve(__dirname, 'src/utils'),
+                '@libs': path.resolve(__dirname, 'src/libs'),
             },
         },
     });

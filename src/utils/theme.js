@@ -1,13 +1,14 @@
 import { THEME, DEFAULT_THEME_ID, THEME_LOCAL_STORAGE } from '@constants';
+import storage from '@libs/storage';
 
 export const isValidThemeId = (themeId) => Object.values(THEME).includes(themeId);
 
 export const setThemeIdToLocalStorages = (themeId) => {
-    window.localStorage.setItem(THEME_LOCAL_STORAGE, themeId);
+    storage.set(THEME_LOCAL_STORAGE, themeId);
 };
 
 export const getThemeIdFromLocalStorages = () => {
-    const themeId = window.localStorage.getItem(THEME_LOCAL_STORAGE);
+    const themeId = storage.get(THEME_LOCAL_STORAGE);
     return isValidThemeId(themeId) ? themeId : null;
 };
 
