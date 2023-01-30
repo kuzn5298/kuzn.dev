@@ -1,10 +1,9 @@
 import { graphql } from 'gatsby';
 import React from 'react';
 
-const AboutPage = ({ data }) => (
+const AboutPage = () => (
     <div>
-        <h1>About</h1>
-        <div dangerouslySetInnerHTML={{ __html: data?.about?.html }} />
+        <h2>About</h2>
     </div>
 );
 

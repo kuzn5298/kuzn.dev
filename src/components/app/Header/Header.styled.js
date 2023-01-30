@@ -1,8 +1,7 @@
 import styled from 'styled-components';
 
 export const HeaderContainer = styled.header`
-    padding: var(--header-height-padding)
-        calc(var(--app-width-padding) + var(--header-width-padding));
+    padding: var(--header-height-padding) var(--header-width-padding);
 
     display: flex;
     align-items: center;

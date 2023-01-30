@@ -66,13 +66,6 @@ module.exports = {
                 path: `${__dirname}/content/summary`,
             },
         },
-        {
-            resolve: `gatsby-plugin-page-creator`,
-            options: {
-                path: `${__dirname}/src/pages`,
-                ignore: [`*/style.js`, `*/components/**`],
-            },
-        },
         `gatsby-transformer-remark`,
     ],
 };

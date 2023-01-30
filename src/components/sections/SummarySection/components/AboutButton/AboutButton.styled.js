@@ -12,7 +12,7 @@ const animate = keyframes`
     }
 `;
 
-export const ArrowButtonContainer = styled.button`
+export const AboutButtonContainer = styled.button`
     position: relative;
     border: none;
     cursor: pointer;
@@ -23,11 +23,11 @@ export const ArrowButtonContainer = styled.button`
     color: ${({ theme }) => theme.palette.primary.main};
     text-transform: uppercase;
     line-height: 1;
-    padding: 1rem 0;
-    font-size: 1.25rem;
+    padding: 1em 0;
+    font-size: 1em;
 
     .arrow {
-        height: 0.125rem;
+        height: 0.125em;
         background-color: ${({ theme }) => theme.palette.primary.main};
 
         width: 100%;
@@ -42,7 +42,7 @@ export const ArrowButtonContainer = styled.button`
             height: 0.125rem;
             position: absolute;
             right: 0;
-            width: 1rem;
+            width: 1em;
             background-color: ${({ theme }) => theme.palette.primary.main};
         }
 

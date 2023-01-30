@@ -1,13 +1,17 @@
 import React from 'react';
+import styled from 'styled-components';
 import { graphql } from 'gatsby';
-import { goAbout } from '@utils/navigation';
-import { ArrowButton } from './index/components';
-import { IndexContainer, SummarySection } from './index/style';
+import { SummarySection } from '@components/sections';
+
+const IndexContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+`;
 
 const IndexPage = ({ data }) => (
     <IndexContainer>
-        <SummarySection dangerouslySetInnerHTML={{ __html: data?.summary?.html }} />
-        <ArrowButton onClick={goAbout}>See more about me</ArrowButton>
+        <SummarySection html={data?.summary?.html} />
     </IndexContainer>
 );
 
