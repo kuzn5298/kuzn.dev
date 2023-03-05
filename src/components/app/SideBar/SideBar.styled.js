@@ -5,7 +5,7 @@ export const SideBarContainer = styled.aside`
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    top: 0;
+    top: var(--header-height);
     bottom: 0;
     left: var(--app-width-padding);
 `;

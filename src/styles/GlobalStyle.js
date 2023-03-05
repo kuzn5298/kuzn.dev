@@ -10,7 +10,6 @@ const GlobalStyle = createGlobalStyle`
     ${NormalizeStyles};
     ${CustomStyles};
 
-
     :root {
         background-color: ${({ theme }) => theme.palette.background.default};
         color: ${({ theme }) => theme.palette.text.primary};

@@ -6,7 +6,6 @@ import { SummarySection } from '@components/sections';
 const IndexContainer = styled.div`
     display: flex;
     flex-direction: column;
-    height: 100%;
 `;
 
 const IndexPage = ({ data }) => (
