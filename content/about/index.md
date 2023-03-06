@@ -1,7 +1,3 @@
----
-title: 'About'
----
-
 Hello! My name is Nikita Kuznetsov, and I'm a passionate Front-End developer from Belarus, currently living and working in Warsaw, Poland.
 
 I have been doing web development since university and have always taken a deep interest in making web applications convenient and modern.

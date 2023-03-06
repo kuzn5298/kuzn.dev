@@ -12,6 +12,7 @@ export const BackgroundTitleContainer = styled.div`
 
 export const BackgroundTitle = styled.span`
     position: absolute;
+    color: ${({ theme }) => theme.palette.common.lightGray};
     right: var(--app-width-padding);
     bottom: -5%;
     white-space: nowrap;
@@ -19,6 +20,5 @@ export const BackgroundTitle = styled.span`
     transform-origin: bottom right;
     transform: rotate(-90deg) translateX(100%);
     font-weight: 900;
-    opacity: 0.05;
     line-height: 0.75;
 `;

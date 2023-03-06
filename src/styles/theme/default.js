@@ -5,6 +5,7 @@ const defaultTheme = {
         common: {
             white: '#FFFFFF',
             black: '#000000',
+            lightGray: 'rgba(158, 158, 158, 0.1)',
         },
         icon: {
             theme: {

@@ -2,21 +2,15 @@ import React from 'react';
 import { SectionContainer } from '@components/app';
 import { useMedia } from '@hooks/useMedia';
 import { Avatar } from './components';
-import { AboutSectionContainer, AboutSectionHtml, Title } from './AboutSection.styled';
+import { AboutSectionContainer, AboutSectionHtml } from './AboutSection.styled';
 
 const AboutSection = ({ title, html, ...props }) => {
     const isMobile = useMedia((theme) => theme.breakpoints.down('sm'));
 
     return (
-        <SectionContainer {...props}>
+        <SectionContainer title={title} {...props}>
             <AboutSectionContainer>
-                <div className="content">
-                    <Title className="title">About</Title>
-                    <AboutSectionHtml
-                        className="content"
-                        dangerouslySetInnerHTML={{ __html: html }}
-                    />
-                </div>
+                <AboutSectionHtml className="content" dangerouslySetInnerHTML={{ __html: html }} />
                 {!isMobile && (
                     <div className="avatar">
                         <Avatar />

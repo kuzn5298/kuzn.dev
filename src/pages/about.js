@@ -1,7 +1,7 @@
 import { graphql } from 'gatsby';
 import React from 'react';
 import styled from 'styled-components';
-import { AboutSection } from '@components/sections';
+import { AboutSection, ExperienceSection } from '@components/sections';
 
 const AboutContainer = styled.div`
     display: flex;
@@ -10,15 +10,21 @@ const AboutContainer = styled.div`
 
 const AboutPage = ({ data }) => (
     <AboutContainer>
-        <AboutSection id="about" html={data?.about?.html} title={data?.about?.frontmatter?.title} />
+        <AboutSection id="about" title="About Me" html={data?.about?.html} />
+        <ExperienceSection id="experience" title="Experience" items={data?.experience?.nodes} />
     </AboutContainer>
 );
 
 const NAV_SECTIONS = [
     {
         id: 'about',
-        name: 'About',
+        name: 'About Me',
         to: 'about',
+    },
+    {
+        id: 'experience',
+        name: 'Experience',
+        to: 'experience',
     },
 ];
 
@@ -34,8 +40,21 @@ export const pageQuery = graphql`
     {
         about: markdownRemark(fileAbsolutePath: { regex: "/content/about/" }) {
             html
-            frontmatter {
-                title
+        }
+        experience: allMarkdownRemark(
+            sort: { frontmatter: { date: DESC } }
+            filter: { fileAbsolutePath: { regex: "/content/experience/" } }
+        ) {
+            nodes {
+                id
+                html
+                frontmatter {
+                    company
+                    date(formatString: "MMMM DD, YYYY")
+                    range
+                    position
+                    location
+                }
             }
         }
     }
