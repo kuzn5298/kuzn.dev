@@ -11,7 +11,7 @@ const variables = css`
             2 * var(--header-height-padding) + ${({ theme }) => 2 * theme.typography.fontSize}px
         );
 
-        --max-content-width: ${({ theme }) => `${theme.breakpoints.values.lg}px`};
+        --max-content-width: ${({ theme }) => `${theme.breakpoints.values.md}px`};
         --content-height-padding: 0rem;
         --content-width-padding: 7.5rem;
 
