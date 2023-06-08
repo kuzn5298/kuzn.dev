@@ -13,7 +13,6 @@ const SectionContainer = styled.section`
     gap: 1rem;
 
     ${({ theme }) => theme.breakpoints.down('sm')} {
-        min-height: auto;
         padding-bottom: 2rem;
     }
 `;
