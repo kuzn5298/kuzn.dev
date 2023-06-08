@@ -1,30 +1,69 @@
 import { graphql } from 'gatsby';
 import React from 'react';
 import styled from 'styled-components';
-import { AboutSection, ExperienceSection } from '@components/sections';
+import { AboutSection, ExperienceSection, SkillsSection, WorkSection } from '@components/sections';
 
 const AboutContainer = styled.div`
     display: flex;
     flex-direction: column;
 `;
 
+const SECTIONS = {
+    ABOUT: {
+        id: 'about',
+        title: 'About Me',
+    },
+    EXPERIENCE: {
+        id: 'experience',
+        title: 'Experience',
+    },
+    WORK: {
+        id: 'work',
+        title: 'Work',
+    },
+    SKILLS: {
+        id: 'skills',
+        title: 'My Skills',
+    },
+};
+
 const AboutPage = ({ data }) => (
     <AboutContainer>
-        <AboutSection id="about" title="About Me" html={data?.about?.html} />
-        <ExperienceSection id="experience" title="Experience" items={data?.experience?.nodes} />
+        <AboutSection
+            id={SECTIONS.ABOUT.id}
+            title={SECTIONS.ABOUT.title}
+            html={data?.about?.html}
+        />
+        <ExperienceSection
+            id={SECTIONS.EXPERIENCE.id}
+            title={SECTIONS.EXPERIENCE.title}
+            items={data?.experience?.nodes}
+        />
+        <WorkSection id={SECTIONS.WORK.id} title={SECTIONS.WORK.title} />
+        <SkillsSection id={SECTIONS.SKILLS.id} title={SECTIONS.SKILLS.title} />
     </AboutContainer>
 );
 
 const NAV_SECTIONS = [
     {
-        id: 'about',
-        name: 'About Me',
-        to: 'about',
+        id: SECTIONS.ABOUT.id,
+        name: SECTIONS.ABOUT.title,
+        to: SECTIONS.ABOUT.id,
     },
     {
-        id: 'experience',
-        name: 'Experience',
-        to: 'experience',
+        id: SECTIONS.EXPERIENCE.id,
+        name: SECTIONS.EXPERIENCE.title,
+        to: SECTIONS.EXPERIENCE.id,
+    },
+    {
+        id: SECTIONS.WORK.id,
+        name: SECTIONS.WORK.title,
+        to: SECTIONS.WORK.id,
+    },
+    {
+        id: SECTIONS.SKILLS.id,
+        name: SECTIONS.SKILLS.title,
+        to: SECTIONS.SKILLS.id,
     },
 ];
 

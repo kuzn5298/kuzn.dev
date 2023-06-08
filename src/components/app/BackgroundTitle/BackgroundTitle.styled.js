@@ -21,4 +21,6 @@ export const BackgroundTitle = styled.span`
     transform: rotate(-90deg) translateX(100%);
     font-weight: 900;
     line-height: 0.75;
+    opacity: 0;
+    transition: opacity 1s ease;
 `;

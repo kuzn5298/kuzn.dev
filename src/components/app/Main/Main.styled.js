@@ -15,7 +15,5 @@ export const MainContainer = styled.main`
     padding: var(--content-height-padding) var(--content-width-padding);
     width: 100%;
     font-size: 1rem;
-    ${({ theme }) => theme.breakpoints.down('sm')} {
-        font-size: 0.75rem;
-    }
+    scroll-snap-type: y mandatory;
 `;

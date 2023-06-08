@@ -1,4 +1,5 @@
 import React, { useCallback, useLayoutEffect, useRef, useState } from 'react';
+import { useIsMounted } from '@hooks';
 import {
     BackgroundTitleContainer,
     BackgroundTitle as BackgroundTitleStyle,
@@ -23,10 +24,23 @@ const BackgroundTitle = ({ title }) => {
         }
     }, []);
 
-    // FIXME: calculate correct fontSize
     useLayoutEffect(() => {
-        handleResize();
-    }, [title, handleResize]);
+        const id = setTimeout(() => {
+            handleResize();
+        }, 500);
+
+        return () => {
+            clearTimeout(id);
+        };
+    }, [handleResize]);
+
+    const isMounted = useIsMounted();
+
+    useLayoutEffect(() => {
+        if (isMounted) {
+            handleResize();
+        }
+    }, [title, handleResize, isMounted]);
 
     useLayoutEffect(() => {
         window.addEventListener('resize', handleResize);
@@ -42,7 +56,11 @@ const BackgroundTitle = ({ title }) => {
 
     return (
         <BackgroundTitleContainer ref={containerRef}>
-            <BackgroundTitleStyle ref={titleRef} className="title" style={{ fontSize }}>
+            <BackgroundTitleStyle
+                ref={titleRef}
+                className="title"
+                style={{ fontSize, opacity: fontSize ? 1 : 0 }}
+            >
                 {title}
             </BackgroundTitleStyle>
         </BackgroundTitleContainer>

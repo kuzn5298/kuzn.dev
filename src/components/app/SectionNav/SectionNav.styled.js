@@ -13,6 +13,7 @@ export const SectionNavContainer = styled.aside`
     gap: 1rem;
     margin: 0;
     padding: 0;
+    line-height: 0;
 `;
 
 export const SectionItem = styled(Link)`
@@ -22,6 +23,7 @@ export const SectionItem = styled(Link)`
     border: 0.125rem solid ${({ theme }) => theme.palette.primary.main};
     box-sizing: border-box;
     background-color: transparent;
+    transition: all 0.5s ease;
 
     cursor: pointer;
     transform: rotate(45deg);

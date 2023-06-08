@@ -9,6 +9,7 @@ const SectionContainer = styled.section`
     justify-content: center;
     box-sizing: border-box;
     padding-bottom: var(--header-height);
+    scroll-snap-align: start;
 `;
 
 const SectionWrapper = styled.div`

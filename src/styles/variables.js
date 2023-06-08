@@ -17,18 +17,14 @@ const variables = css`
 
         ${({ theme }) => theme.breakpoints.down('md')} {
             --app-width-padding: 2rem;
-
             --header-width-padding: 2rem;
-
             --content-width-padding: 5.5rem;
         }
 
         ${({ theme }) => theme.breakpoints.down('sm')} {
             --app-width-padding: 1rem;
-
             --header-height-padding: 1rem;
             --header-width-padding: 1rem;
-
             --content-width-padding: 1rem;
         }
     }

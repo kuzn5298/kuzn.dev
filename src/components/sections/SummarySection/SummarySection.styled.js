@@ -23,5 +23,8 @@ export const SummarySectionHtml = styled.div`
         color: ${({ theme }) => theme.palette.primary.main};
         text-transform: uppercase;
         margin: 0;
+        ${({ theme }) => theme.breakpoints.down('sm')} {
+            font-size: 2.75em;
+        }
     }
 `;
