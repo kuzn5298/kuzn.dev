@@ -4,7 +4,7 @@ import { AboutButton } from './components';
 import { SummarySectionContainer, SummarySectionHtml } from './SummarySection.styled';
 
 const SummarySection = ({ html }) => (
-    <SectionContainer>
+    <SectionContainer alignCenter>
         <SummarySectionContainer>
             <SummarySectionHtml dangerouslySetInnerHTML={{ __html: html }} />
             <AboutButton />

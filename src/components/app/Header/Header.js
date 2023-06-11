@@ -1,4 +1,5 @@
 import React from 'react';
+import clsx from 'clsx';
 import { Logo, ResumeButton } from '@components/custom';
 import { IconButton } from '@components/core';
 import { MenuIcon } from '@components/icons';
@@ -8,11 +9,11 @@ import Navigation from '../Navigation';
 import AppMenu from '../AppMenu';
 import { HeaderContainer, HeaderActions } from './Header.styled';
 
-const Header = ({ className }) => {
+const Header = ({ className, elevation }) => {
     const isMobile = useMedia((theme) => theme.breakpoints.down('sm'));
 
     return (
-        <HeaderContainer className={className}>
+        <HeaderContainer className={clsx(elevation && 'elevation-2', className)}>
             <Logo onClick={goHome} />
             {!isMobile && (
                 <HeaderActions>
@@ -31,4 +32,4 @@ const Header = ({ className }) => {
     );
 };
 
-export default Header;
+export default React.memo(Header);

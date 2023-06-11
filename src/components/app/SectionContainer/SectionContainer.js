@@ -1,24 +1,26 @@
 import React from 'react';
+import clsx from 'clsx';
 import styled from 'styled-components';
 
 const SectionContainer = styled.section`
     display: flex;
     flex-direction: column;
-    justify-content: center;
     min-height: calc(100vh - var(--header-height));
     width: 100%;
     box-sizing: border-box;
     padding-bottom: var(--header-height);
     scroll-snap-align: start;
     gap: 1rem;
+    padding-top: 20%;
+
+    &.align-center {
+        padding-top: 0;
+        justify-content: center;
+    }
 
     ${({ theme }) => theme.breakpoints.down('sm')} {
-        padding-bottom: 2rem;
+        padding-top: 5%;
     }
-`;
-
-const SectionWrapper = styled.div`
-    width: 100%;
 `;
 
 const Title = styled.h2`
@@ -26,10 +28,10 @@ const Title = styled.h2`
     color: ${({ theme }) => theme.palette.primary.main};
 `;
 
-const Section = ({ title, children, ...props }) => (
-    <SectionContainer {...props}>
+const Section = ({ title, children, alignCenter, className, ...props }) => (
+    <SectionContainer className={clsx(alignCenter && 'align-center', className)} {...props}>
         {title && <Title>{title}</Title>}
-        <SectionWrapper>{children}</SectionWrapper>
+        {children}
     </SectionContainer>
 );
 

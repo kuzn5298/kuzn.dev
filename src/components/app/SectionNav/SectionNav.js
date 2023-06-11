@@ -12,4 +12,4 @@ const SectionNav = ({ sections, containerId }) => (
     </SectionNavContainer>
 );
 
-export default SectionNav;
+export default React.memo(SectionNav);
