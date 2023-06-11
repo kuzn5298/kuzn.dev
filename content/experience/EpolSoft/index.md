@@ -4,6 +4,7 @@ date: '2019-07-01T00:00:00.000Z'
 range: 'July 2019 - July 2021'
 position: 'Software Developer'
 location: 'Brest, Belarus'
+link: 'https://www.epolsoft.com/'
 ---
 
 -   Work on projects in the areas of medicine, digital infrastructure, business, etc.

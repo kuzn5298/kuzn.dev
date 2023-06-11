@@ -5,6 +5,7 @@ const CustomStyles = css`
         text-decoration: none;
         position: relative;
         color: ${({ theme }) => theme.palette.primary.main};
+        cursor: pointer;
 
         &::before {
             content: '';

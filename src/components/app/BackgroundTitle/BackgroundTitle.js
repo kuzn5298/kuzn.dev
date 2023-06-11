@@ -1,5 +1,4 @@
 import React, { useCallback, useLayoutEffect, useRef, useState } from 'react';
-import { useIsMounted } from '@hooks';
 import {
     BackgroundTitleContainer,
     BackgroundTitle as BackgroundTitleStyle,
@@ -24,23 +23,20 @@ const BackgroundTitle = ({ title }) => {
         }
     }, []);
 
-    useLayoutEffect(() => {
-        const id = setTimeout(() => {
-            handleResize();
-        }, 500);
+    const isMounted = useRef(false);
 
-        return () => {
-            clearTimeout(id);
-        };
+    useLayoutEffect(() => {
+        setTimeout(() => {
+            handleResize();
+            isMounted.current = true;
+        }, 500);
     }, [handleResize]);
 
-    const isMounted = useIsMounted();
-
     useLayoutEffect(() => {
-        if (isMounted) {
+        if (isMounted.current) {
             handleResize();
         }
-    }, [title, handleResize, isMounted]);
+    }, [title, handleResize]);
 
     useLayoutEffect(() => {
         window.addEventListener('resize', handleResize);

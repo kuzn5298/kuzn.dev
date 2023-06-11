@@ -4,6 +4,7 @@ date: '2021-07-01T00:00:00.000Z'
 range: 'July 2021 - April 2022'
 position: 'Software Developer'
 location: 'Brest, Belarus'
+link: 'https://issoft.by/'
 ---
 
 -   Architecture redesign, optimization and implement of the main functionality for the client side

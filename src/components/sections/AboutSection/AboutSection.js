@@ -1,6 +1,6 @@
 import React from 'react';
 import { SectionContainer } from '@components/app';
-import { Avatar } from './Avatar';
+import Avatar from './Avatar';
 import { AboutSectionContainer, AboutSectionHtml } from './AboutSection.styled';
 
 const AboutSection = ({ title, html, ...props }) => (

@@ -93,6 +93,7 @@ export const pageQuery = graphql`
                     range
                     position
                     location
+                    link
                 }
             }
         }

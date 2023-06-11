@@ -4,6 +4,7 @@ date: '2022-04-01T00:00:00.000Z'
 range: 'April 2022 - Present'
 position: 'Software Developer'
 location: 'Warsaw, Poland'
+link: 'https://www.coherentsolutions.com/'
 ---
 
 -   Work in a large team on a project in the field of medicine with a client from the USA
