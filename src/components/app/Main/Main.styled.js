@@ -11,9 +11,9 @@ export const MainContainer = styled.main`
     justify-content: center;
     box-sizing: border-box;
     overflow: auto;
-    scroll-behavior: smooth;
     padding: var(--content-height-padding) var(--content-width-padding);
     width: 100%;
     font-size: 1rem;
-    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+    /* scroll-snap-type: y mandatory; */
 `;

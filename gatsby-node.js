@@ -4,7 +4,6 @@
  * See: https://www.gatsbyjs.com/docs/reference/config-files/gatsby-node/
  */
 const path = require('path');
-const _ = require('lodash');
 
 /**
  * @type {import('gatsby').GatsbyNode['createPages']}
@@ -36,7 +35,7 @@ exports.createPages = async ({ actions, graphql }) => {
 
     works.forEach(({ node }) => {
         createPage({
-            path: `/works/${_.kebabCase(node.frontmatter.title)}`,
+            path: `/works/${node.id}`,
             component: workTemplate,
             context: {
                 id: node.id,

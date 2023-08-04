@@ -14,3 +14,7 @@ export const goHome = () => {
 export const goAbout = () => {
     navigate(APP_ROUTES.ABOUT);
 };
+
+export const goWorkById = (id) => {
+    navigate(`${APP_ROUTES.WORK}/${id}`);
+};

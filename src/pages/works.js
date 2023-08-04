@@ -1,6 +1,5 @@
 import React from 'react';
 import { graphql, Link } from 'gatsby';
-import _ from 'lodash';
 
 const WorksPage = ({ data }) => {
     const works = data.works.nodes;
@@ -9,7 +8,7 @@ const WorksPage = ({ data }) => {
             <h1>Works</h1>
             <hr />
             {works.map((work, i) => {
-                const link = `/works/${_.kebabCase(work.frontmatter.title)}`;
+                const link = `/works/${work.id}`;
                 return (
                     <div key={work.id}>
                         <b>

@@ -39,7 +39,7 @@ const AboutPage = ({ data }) => (
             title={SECTIONS.EXPERIENCE.title}
             items={data?.experience?.nodes}
         />
-        <WorkSection id={SECTIONS.WORK.id} title={SECTIONS.WORK.title} />
+        <WorkSection id={SECTIONS.WORK.id} title={SECTIONS.WORK.title} items={data?.works?.nodes} />
         <SkillsSection id={SECTIONS.SKILLS.id} title={SECTIONS.SKILLS.title} />
     </AboutContainer>
 );
@@ -94,6 +94,26 @@ export const pageQuery = graphql`
                     position
                     location
                     link
+                }
+            }
+        }
+        works: allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/content/works/" } }) {
+            nodes {
+                id
+                html
+                frontmatter {
+                    date
+                    title
+                    version
+                    status
+                    github
+                    external
+                    image {
+                        id
+                        publicURL
+                    }
+                    description
+                    tags
                 }
             }
         }

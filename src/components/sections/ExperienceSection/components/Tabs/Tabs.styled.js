@@ -8,6 +8,7 @@ export const TabsContainer = styled.div`
     position: relative;
     display: flex;
     width: 100%;
+    box-sizing: border-box;
 
     .highlight {
         position: absolute;

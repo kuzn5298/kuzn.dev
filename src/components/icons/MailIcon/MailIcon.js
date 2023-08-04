@@ -1,5 +1,5 @@
 import React from 'react';
-import { SvgIcon } from '@components/core';
+import SvgIcon from '../SvgIcon';
 
 const MailIcon = (props) => (
     <SvgIcon {...props}>
