@@ -13,7 +13,7 @@ const ExperienceSection = ({ title, items, ...props }) => {
     }, []);
 
     return (
-        <SectionContainer title={title} {...props}>
+        <SectionContainer alignCenter title={title} {...props}>
             <TabContainer className={isMobile ? 'horizontal' : 'vertical'}>
                 <Tabs
                     value={value}

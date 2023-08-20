@@ -23,7 +23,7 @@ const SECTIONS = {
     },
     SKILLS: {
         id: 'skills',
-        title: 'My Skills',
+        title: 'Skills',
     },
 };
 

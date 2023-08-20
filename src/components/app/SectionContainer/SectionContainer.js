@@ -14,12 +14,18 @@ const SectionContainer = styled.section`
     padding-top: 20%;
 
     &.align-center {
-        padding-top: 0;
+        padding-top: 5%;
         justify-content: center;
     }
 
     ${({ theme }) => theme.breakpoints.down('sm')} {
         padding-top: 5%;
+        min-height: initial;
+        scroll-snap-align: initial;
+
+        &.align-center {
+            justify-content: initial;
+        }
     }
 `;
 

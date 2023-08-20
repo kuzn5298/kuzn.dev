@@ -4,7 +4,7 @@ import Avatar from './Avatar';
 import { AboutSectionContainer, AboutSectionHtml } from './AboutSection.styled';
 
 const AboutSection = ({ title, html, ...props }) => (
-    <SectionContainer title={title} {...props}>
+    <SectionContainer alignCenter title={title} {...props}>
         <AboutSectionContainer>
             <AboutSectionHtml className="content" dangerouslySetInnerHTML={{ __html: html }} />
             <Avatar className="avatar" />

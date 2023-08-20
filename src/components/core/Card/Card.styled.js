@@ -11,7 +11,6 @@ export const CardContainer = styled.article`
         display: flex;
         flex-direction: column;
         gap: 2rem;
-        left: -1.5rem;
         width: 70%;
         backdrop-filter: blur(0.5rem);
         padding: 1rem;
@@ -85,6 +84,32 @@ export const CardContainer = styled.article`
 
         ${({ theme }) => theme.breakpoints.down('md')} {
             left: 0;
+        }
+    }
+
+    ${({ theme }) => theme.breakpoints.up('md')} {
+        padding-left: 0;
+    }
+
+    &.left {
+        ${({ theme }) => theme.breakpoints.up('md')} {
+            padding-right: 0;
+        }
+
+        .details {
+            left: 0;
+            margin-left: auto;
+
+            ${({ theme }) => theme.breakpoints.down('md')} {
+                margin-left: 0;
+            }
+        }
+        .poster {
+            right: 40%;
+            left: 0;
+            ${({ theme }) => theme.breakpoints.down('md')} {
+                right: 0;
+            }
         }
     }
 `;

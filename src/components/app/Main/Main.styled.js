@@ -15,5 +15,5 @@ export const MainContainer = styled.main`
     width: 100%;
     font-size: 1rem;
     scroll-behavior: smooth;
-    /* scroll-snap-type: y mandatory; */
+    scroll-snap-type: y proximity;
 `;
