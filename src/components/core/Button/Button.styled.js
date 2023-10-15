@@ -13,7 +13,7 @@ const sizeBlock = css`
                 return css`
                     gap: 1.5rem;
                     padding: 0.75rem 2.25rem;
-                    font-size: 1.25rem;
+                    font-size: 1rem;
                 `;
             default:
                 return css`
@@ -72,6 +72,8 @@ export const ButtonContainer = styled.button`
         border-left-color: currentColor;
     }
 
+    &.border:after,
+    &.border:before,
     &:hover:after,
     &:hover:before {
         width: 100%;

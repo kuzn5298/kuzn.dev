@@ -1,5 +1,7 @@
 import { GithubIcon, InstagramIcon, LinkedinIcon, MailIcon, TwitterIcon } from '@components/icons';
 
+export const EMAIL_LINK = 'mailto:hi@kuzn.dev';
+
 export const SOCIAL = {
     GITHUB: 'github',
     LINKEDIN: 'linkedin',
@@ -37,6 +39,6 @@ export const SOCIAL_LIST = [
         id: SOCIAL.EMAIL,
         name: 'Email',
         icon: MailIcon,
-        link: 'mailto:kuzn5298@gmail.com',
+        link: EMAIL_LINK,
     },
 ];

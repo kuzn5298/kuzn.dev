@@ -45,6 +45,11 @@ jobs:
                   restore-keys: |
                       ${{ runner.os }}-gatsby-build-
 
+            - name: Create env file
+              run: |
+                  touch .env.production
+                  echo '${{ secrets.ENV_EMAILJS_CONFIG }}' >> .env.production
+
             - name: Install dependencies
               run: npm i
 

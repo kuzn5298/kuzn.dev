@@ -17,6 +17,7 @@ const GlobalStyle = createGlobalStyle`
         color: ${({ theme }) => theme.palette.text.primary};
         font-family: ${({ theme }) => theme.typography.fontFamily};
         font-size: ${({ theme }) => theme.typography.fontSize}px;
+        line-height: 1.4;
     }
 `;
 

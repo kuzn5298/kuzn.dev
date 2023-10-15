@@ -40,7 +40,9 @@ const NotFoundPage = () => (
     <NotFoundPageContainer>
         <h1 className="code">404</h1>
         <p className="message">Page not found</p>
-        <Button onClick={goHome}>Home</Button>
+        <Button border onClick={goHome}>
+            Home
+        </Button>
     </NotFoundPageContainer>
 );
 
