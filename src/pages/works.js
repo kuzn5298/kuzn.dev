@@ -1,7 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import { goWorkById } from '@utils/navigation';
-import { Card, CardList } from '@components/core';
+import { Card, CardList } from '@components/custom';
 import styled from 'styled-components';
 
 const Title = styled.h2`
@@ -19,7 +19,7 @@ const WorksPage = ({ data }) => {
                         key={item.id}
                         title={item.frontmatter.title}
                         description={item.frontmatter.description}
-                        image={item.frontmatter.image?.publicURL}
+                        image={item.frontmatter.laptopPreview?.publicURL}
                         github={item.frontmatter.github}
                         external={item.frontmatter.external}
                         status={item.frontmatter.status}
@@ -52,7 +52,7 @@ export const pageQuery = graphql`
                     status
                     github
                     external
-                    image {
+                    laptopPreview {
                         id
                         publicURL
                     }

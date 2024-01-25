@@ -13,7 +13,9 @@ const Fonts = css`
         font-family: 'Lexend';
         font-style: normal;
         font-weight: 400;
-        src: local(''), url(${LexendRegularWoff2}) format('woff2'),
+        src:
+            local(''),
+            url(${LexendRegularWoff2}) format('woff2'),
             url(${LexendRegularWoff}) format('woff');
     }
 
@@ -21,14 +23,18 @@ const Fonts = css`
         font-family: 'Lexend';
         font-style: normal;
         font-weight: 700;
-        src: local(''), url(${LexendBoldWoff2}) format('woff2'),
+        src:
+            local(''),
+            url(${LexendBoldWoff2}) format('woff2'),
             url(${LexendBoldWoff}) format('woff');
     }
     @font-face {
         font-family: 'Lexend';
         font-style: normal;
         font-weight: 900;
-        src: local(''), url(${LexendBlackWoff2}) format('woff2'),
+        src:
+            local(''),
+            url(${LexendBlackWoff2}) format('woff2'),
             url(${LexendBlackWoff}) format('woff');
     }
 `;

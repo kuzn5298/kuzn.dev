@@ -4,8 +4,8 @@ import clsx from 'clsx';
 import { ExternalLinkIcon, GithubIcon } from '@components/icons';
 import { openURL } from '@utils/navigation';
 import { CardContainer } from './Card.styled';
-import IconButton from '../IconButton';
-import Chip from '../Chip';
+import { IconButton, Chip } from '../../core';
+import ToolChip from '../ToolChip';
 
 const Card = ({
     title,
@@ -62,9 +62,7 @@ const Card = ({
                 <div className="tags">
                     {tags.map((tag, i) => (
                         // eslint-disable-next-line react/no-array-index-key
-                        <Chip key={i} size="small" color="secondary">
-                            {tag}
-                        </Chip>
+                        <ToolChip key={i}>{tag}</ToolChip>
                     ))}
                 </div>
             </div>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { SectionContainer } from '@components/app';
 import { goWorkById } from '@utils/navigation';
-import { Card, CardList } from '../../core';
+import { Card, CardList } from '../../custom';
 
 const WorkSection = ({ title, items, ...props }) => (
     <SectionContainer alignCenter title={title} {...props}>
@@ -11,7 +11,7 @@ const WorkSection = ({ title, items, ...props }) => (
                     key={item.id}
                     title={item.frontmatter.title}
                     description={item.frontmatter.description}
-                    image={item.frontmatter.image?.publicURL}
+                    image={item.frontmatter.laptopPreview?.publicURL}
                     github={item.frontmatter.github}
                     external={item.frontmatter.external}
                     status={item.frontmatter.status}

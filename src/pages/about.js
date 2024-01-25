@@ -108,7 +108,7 @@ export const pageQuery = graphql`
                     status
                     github
                     external
-                    image {
+                    laptopPreview {
                         id
                         publicURL
                     }

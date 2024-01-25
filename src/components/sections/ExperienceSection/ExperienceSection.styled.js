@@ -10,6 +10,7 @@ export const TabContainer = styled.div`
 
     &.vertical {
         flex-direction: row;
+        min-height: 22.5rem;
     }
 
     .panel {

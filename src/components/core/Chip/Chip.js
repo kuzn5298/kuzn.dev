@@ -26,6 +26,24 @@ const sizeBlock = css`
     }}
 `;
 
+const borderColorBlock = css`
+    ${({ borderColor, theme }) => {
+        if (borderColor) {
+            switch (borderColor) {
+                case 'primary':
+                    return css`
+                        border-left: 3px solid ${theme.palette.primary.main};
+                    `;
+                default:
+                    return css`
+                        border-left: 3px solid ${borderColor};
+                    `;
+            }
+        }
+        return undefined;
+    }}
+`;
+
 const colorBlock = css`
     ${({ color, theme }) => {
         switch (color) {
@@ -48,6 +66,7 @@ const colorBlock = css`
 const Chip = styled.div`
     ${sizeBlock}
     ${colorBlock}
+    ${borderColorBlock}
 
     text-transform: uppercase;
     white-space: nowrap;
@@ -56,6 +75,7 @@ const Chip = styled.div`
 Chip.propTypes = {
     children: PropTypes.node,
     className: PropTypes.string,
+    borderColor: PropTypes.oneOfType([PropTypes.oneOf(['primary']), PropTypes.string]),
     color: PropTypes.oneOfType([PropTypes.oneOf(['primary', 'secondary']), PropTypes.string]),
     size: PropTypes.oneOfType([PropTypes.oneOf(['inherit', 'large', 'medium', 'small'])]),
 };

@@ -31,7 +31,9 @@ export const TabsContainer = styled.div`
 
         .highlight {
             width: 0.25rem;
-            transition: top 0.5s, height 0.5s;
+            transition:
+                top 0.5s,
+                height 0.5s;
         }
 
         &::before {
@@ -47,7 +49,9 @@ export const TabsContainer = styled.div`
 
         .highlight {
             height: 0.25rem;
-            transition: left 0.5s, width 0.5s;
+            transition:
+                left 0.5s,
+                width 0.5s;
         }
 
         &::before {
