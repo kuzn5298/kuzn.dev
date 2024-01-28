@@ -5,7 +5,7 @@ import { ToolChip } from '@components/custom';
 import { openURL } from '@utils/navigation';
 import { HeaderContainer } from './Header.styled';
 
-const Header = ({ title, github, external, status, tags }) => {
+const Header = ({ title, github, external, status, tags, year }) => {
     const handleAction = (url) => (e) => {
         e.stopPropagation();
         openURL(url);
@@ -48,7 +48,7 @@ const Header = ({ title, github, external, status, tags }) => {
                         ))}
                     </div>
                 )}
-                <span className="year">2024</span>
+                {year && <span className="year">{year}</span>}
             </div>
         </HeaderContainer>
     );

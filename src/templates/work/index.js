@@ -1,15 +1,33 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { graphql } from 'gatsby';
 import { Preview } from '@components/core';
 import Header from './Header';
 
 const WorkTemplate = ({ data: { work } }) => {
-    const { title, github, external, status, tags, phonePreview, tabletPreview, laptopPreview } =
-        work.frontmatter;
+    const {
+        title,
+        github,
+        external,
+        status,
+        tags,
+        phonePreview,
+        tabletPreview,
+        laptopPreview,
+        date,
+    } = work.frontmatter;
+
+    const year = useMemo(() => date && new Date(date).getFullYear(), [date]);
 
     return (
         <div>
-            <Header title={title} github={github} external={external} status={status} tags={tags} />
+            <Header
+                title={title}
+                github={github}
+                external={external}
+                status={status}
+                tags={tags}
+                year={year}
+            />
 
             <div>
                 <Preview
