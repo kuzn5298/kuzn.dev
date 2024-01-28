@@ -1,13 +1,13 @@
 import React from 'react';
 import LaptopMockup from '@images/laptop.png';
 
-import { PreviewContainer } from './Preview.styled';
+import { PreviewDeviceContainer } from './Preview.styled';
 
-const LaptopPreview = ({ preview }) => (
-    <PreviewContainer>
-        <div className="laptopPreview" style={{ backgroundImage: `url(${preview})` }} />
+const LaptopPreview = ({ preview, ...props }) => (
+    <PreviewDeviceContainer {...props}>
+        <div className="preview laptopPreview" style={{ backgroundImage: `url(${preview})` }} />
         <img className="previewMockup" src={LaptopMockup} alt="laptop mockup" />
-    </PreviewContainer>
+    </PreviewDeviceContainer>
 );
 
 export default LaptopPreview;

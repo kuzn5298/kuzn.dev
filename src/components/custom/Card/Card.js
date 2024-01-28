@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import { ExternalLinkIcon, GithubIcon } from '@components/icons';
@@ -17,12 +17,15 @@ const Card = ({
     tags,
     onClick,
     position,
+    date,
     ...props
 }) => {
     const handleAction = (url) => (e) => {
         e.stopPropagation();
         openURL(url);
     };
+
+    const year = useMemo(() => date && new Date(date).getFullYear(), [date]);
 
     return (
         <CardContainer {...props} className={clsx(position === 'left' && 'left')}>
@@ -59,11 +62,14 @@ const Card = ({
                     </div>
                 </div>
                 {description && <div>{description}</div>}
-                <div className="tags">
-                    {tags.map((tag, i) => (
-                        // eslint-disable-next-line react/no-array-index-key
-                        <ToolChip key={i}>{tag}</ToolChip>
-                    ))}
+                <div className="bottom">
+                    <div className="tags">
+                        {tags.map((tag, i) => (
+                            // eslint-disable-next-line react/no-array-index-key
+                            <ToolChip key={i}>{tag}</ToolChip>
+                        ))}
+                    </div>
+                    {year && <span className="year">{year}</span>}
                 </div>
             </div>
         </CardContainer>
@@ -80,6 +86,7 @@ Card.propTypes = {
     tags: PropTypes.arrayOf(PropTypes.string),
     onClick: PropTypes.func,
     position: PropTypes.oneOf(['left', 'right']),
+    date: PropTypes.string,
 };
 
 Card.defaultProps = {
@@ -89,8 +96,10 @@ Card.defaultProps = {
     external: undefined,
     status: undefined,
     tags: [],
-    onClick: () => {},
+    // eslint-disable-next-line prettier/prettier
+    onClick: () => { },
     position: 'right',
+    date: '',
 };
 
 export default Card;

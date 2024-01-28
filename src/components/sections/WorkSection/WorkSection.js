@@ -16,6 +16,7 @@ const WorkSection = ({ title, items, ...props }) => (
                     external={item.frontmatter.external}
                     status={item.frontmatter.status}
                     tags={item.frontmatter.tags}
+                    date={item.frontmatter.date}
                     onClick={() => goWorkById(item.id)}
                 />
             ))}

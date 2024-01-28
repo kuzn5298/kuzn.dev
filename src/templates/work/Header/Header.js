@@ -39,14 +39,17 @@ const Header = ({ title, github, external, status, tags }) => {
                 </div>
             </div>
             {tags?.length && <hr className="separator" />}
-            {tags?.length && (
-                <div className="tags">
-                    {tags.map((tag, i) => (
-                        // eslint-disable-next-line react/no-array-index-key
-                        <ToolChip key={i}>{tag}</ToolChip>
-                    ))}
-                </div>
-            )}
+            <div className="bottom">
+                {tags?.length && (
+                    <div className="tags">
+                        {tags.map((tag, i) => (
+                            // eslint-disable-next-line react/no-array-index-key
+                            <ToolChip key={i}>{tag}</ToolChip>
+                        ))}
+                    </div>
+                )}
+                <span className="year">2024</span>
+            </div>
         </HeaderContainer>
     );
 };

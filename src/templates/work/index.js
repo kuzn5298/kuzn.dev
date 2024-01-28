@@ -1,27 +1,23 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import { LaptopPreview } from '@components/core';
+import { Preview } from '@components/core';
 import Header from './Header';
 
 const WorkTemplate = ({ data: { work } }) => {
-    const { title, github, external, status, tags, laptopPreview } = work.frontmatter;
+    const { title, github, external, status, tags, phonePreview, tabletPreview, laptopPreview } =
+        work.frontmatter;
 
     return (
         <div>
             <Header title={title} github={github} external={external} status={status} tags={tags} />
-            <div
-                style={{
-                    display: 'flex',
-                    flexDirection: 'column',
-                    alignItems: 'center',
-                    width: '100%',
-                }}
-            >
-                <div style={{ maxWidth: 600 }}>
-                    <LaptopPreview preview={laptopPreview.publicURL} />
-                </div>
-            </div>
 
+            <div>
+                <Preview
+                    phonePreview={phonePreview.publicURL}
+                    tabletPreview={tabletPreview.publicURL}
+                    laptopPreview={laptopPreview.publicURL}
+                />
+            </div>
             <section dangerouslySetInnerHTML={{ __html: work.html }} />
         </div>
     );
@@ -46,6 +42,14 @@ export const pageQuery = graphql`
                 github
                 external
                 tags
+                phonePreview {
+                    id
+                    publicURL
+                }
+                tabletPreview {
+                    id
+                    publicURL
+                }
                 laptopPreview {
                     id
                     publicURL

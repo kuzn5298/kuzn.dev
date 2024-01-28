@@ -44,10 +44,25 @@ export const CardContainer = styled.article`
             }
         }
 
-        .tags {
+        .bottom {
             display: flex;
-            gap: 0.5rem;
-            overflow: hidden;
+            gap: 1rem;
+            align-items: flex-end;
+
+            .tags {
+                flex: 1;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 0.5rem;
+                overflow: hidden;
+            }
+
+            .year {
+                font-weight: 700;
+                font-size: 2rem;
+                line-height: 1em;
+                color: ${({ theme }) => theme.palette.common.darkGray};
+            }
         }
 
         ${({ theme }) => theme.breakpoints.down('md')} {

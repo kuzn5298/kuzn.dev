@@ -26,6 +26,11 @@ const SectionContainer = styled.section`
         &.align-center {
             justify-content: initial;
         }
+
+        &.mobile-align-center {
+            min-height: calc(100vh - var(--header-height));
+            justify-content: center;
+        }
     }
 `;
 
@@ -34,8 +39,15 @@ const Title = styled.h2`
     color: ${({ theme }) => theme.palette.primary.main};
 `;
 
-const Section = ({ title, children, alignCenter, className, ...props }) => (
-    <SectionContainer className={clsx(alignCenter && 'align-center', className)} {...props}>
+const Section = ({ title, children, alignCenter, mobileAlignCenter, className, ...props }) => (
+    <SectionContainer
+        className={clsx(
+            alignCenter && 'align-center',
+            mobileAlignCenter && 'mobile-align-center',
+            className
+        )}
+        {...props}
+    >
         {title && <Title>{title}</Title>}
         {children}
     </SectionContainer>

@@ -35,9 +35,24 @@ export const HeaderContainer = styled.div`
         margin: 0;
     }
 
-    .tags {
+    .bottom {
         display: flex;
-        gap: 0.5rem;
-        overflow: hidden;
+        gap: 1rem;
+        align-items: flex-start;
+
+        .tags {
+            flex: 1;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            overflow: hidden;
+        }
+
+        .year {
+            font-weight: 700;
+            font-size: 2rem;
+            line-height: 1em;
+            color: ${({ theme }) => theme.palette.common.darkGray};
+        }
     }
 `;
