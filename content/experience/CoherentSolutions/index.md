@@ -7,7 +7,7 @@ location: 'Warsaw, Poland'
 link: 'https://www.coherentsolutions.com/'
 ---
 
--   Work in a large team on a project in the field of medicine with a client from the USA
+-   Work in international teams on projects in various fields with clients from the USA
 -   Write performant, modern, maintainable code.
 -   Manually testing the application in the browser and mobile devices to ensure cross-platform compatibility and responsiveness.
 -   Development and maintenance code, primarily using JavaScript, TypeScript, React, Redux, etc.

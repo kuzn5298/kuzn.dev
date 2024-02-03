@@ -1,8 +1,8 @@
 ---
 date: '2023-07-01T00:00:00.000Z'
 title: 'KUZN.DEV'
-version: 0.1
-status: 'in progress'
+version: 0.9
+status: '0.9'
 github: 'https://github.com/kuzn5298/kuzn.dev'
 external: 'https://kuzn.dev'
 laptopPreview: 'laptop_preview.png'
@@ -15,4 +15,16 @@ tags:
     - Styled-components
 ---
 
-#kuzn.dev
+## Goal
+
+The main goal of creating my personal website is to provide information about my professional experience and skills in a visually appealing and informative manner. The site will include[ a brief overview of myself](/about#about ' a brief overview of myself'), [work experience](/about#expireance 'work experience'), [personal projects](/work 'personal projects'), and the [technology stack](/about#skill 'technology stack') I utilize in my work. This website aims to facilitate communication and the provision of information about my professional background to potential employers and clients.
+
+## Technology Stack
+
+**[React](https://react.dev/ 'React')**: The primary tool in my work. React provides efficient and flexible means to create user interfaces, ensuring high performance and code modularity.
+
+**[Gatsby](https://www.gatsbyjs.com/ 'Gatsby')**: A convenient tool for developing personal websites and blogs. Gatsby utilizes React to build static sites with fast load times and excellent search engine optimization.
+
+**[Styled-components](https://styled-components.com/ 'Styled-components')**: A convenient library for styling in JavaScript. Styled-components allows creating styles directly within components, enhancing code maintainability and readability.
+
+_Note: The goal was also to delve into the new-to-me Gatsby library, expanding my skills and capabilities in the realm of creating static websites._

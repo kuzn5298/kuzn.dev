@@ -2,6 +2,7 @@ import React, { useMemo } from 'react';
 import { graphql } from 'gatsby';
 import { Preview } from '@components/core';
 import Header from './Header';
+import { WorkTemplateContainer } from './WorkTemplate.styled';
 
 const WorkTemplate = ({ data: { work } }) => {
     const {
@@ -19,7 +20,7 @@ const WorkTemplate = ({ data: { work } }) => {
     const year = useMemo(() => date && new Date(date).getFullYear(), [date]);
 
     return (
-        <div>
+        <WorkTemplateContainer>
             <Header
                 title={title}
                 github={github}
@@ -28,16 +29,15 @@ const WorkTemplate = ({ data: { work } }) => {
                 tags={tags}
                 year={year}
             />
-
-            <div>
+            <div className="scroll-container">
                 <Preview
                     phonePreview={phonePreview.publicURL}
                     tabletPreview={tabletPreview.publicURL}
                     laptopPreview={laptopPreview.publicURL}
                 />
+                <section dangerouslySetInnerHTML={{ __html: work.html }} />
             </div>
-            <section dangerouslySetInnerHTML={{ __html: work.html }} />
-        </div>
+        </WorkTemplateContainer>
     );
 };
 
