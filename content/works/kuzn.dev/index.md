@@ -5,9 +5,9 @@ version: 0.9
 status: '0.9'
 github: 'https://github.com/kuzn5298/kuzn.dev'
 external: 'https://kuzn.dev'
-laptopPreview: 'laptop_preview.png'
-tabletPreview: 'tablet_preview.png'
-phonePreview: 'phone_preview.png'
+laptopPreviews: ['./previews/laptop_light_preview.png', './previews/laptop_dark_preview.png']
+tabletPreviews: ['./previews/tablet_light_preview.png', './previews/tablet_dark_preview.png']
+phonePreviews: ['./previews/phone_light_preview.png', './previews/phone_dark_preview.png']
 description: 'My personal Website! Here you can find all the necessary information about me and my professional experience. You can also download my resume and explore my pet-projects.'
 tags:
     - React
@@ -27,4 +27,4 @@ The main goal of creating my personal website is to provide information about my
 
 **[Styled-components](https://styled-components.com/ 'Styled-components')**: A convenient library for styling in JavaScript. Styled-components allows creating styles directly within components, enhancing code maintainability and readability.
 
-_Note: The goal was also to delve into the new-to-me Gatsby library, expanding my skills and capabilities in the realm of creating static websites._
+_Note: An additional goal was to learn the new-to-me Gatsby library, expanding my skills and capabilities in the realm of creating static websites._

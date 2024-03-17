@@ -11,31 +11,44 @@ export const PreviewDeviceContainer = styled.div`
         overflow: hidden;
     }
 
-    .laptopPreview {
-        top: 3%;
+    .laptopPreviewImgContainer {
+        top: 3.5%;
+        bottom: 10.5%;
         left: 9%;
         right: 9%;
-        bottom: 10%;
     }
 
-    .phonePreview {
-        top: 1.5%;
-        bottom: 2%;
-        left: 4%;
-        right: 4%;
-        border-radius: 10%/5%;
+    .phonePreviewImgContainer {
+        top: 7%;
+        left: 5.7%;
+        right: 5.8%;
+        bottom: 4%;
+        border-radius: 0 0 5% 5%;
     }
 
-    .tabletPreview {
-        top: 4%;
-        bottom: 5%;
-        right: 6%;
-        left: 6%;
+    .tabletPreviewImgContainer {
+        top: 4.3%;
+        bottom: 5.7%;
+        left: 5%;
+        right: 5.5%;
     }
 
     .previewMockup {
         position: relative;
         width: 100%;
+        pointer-events: none;
+    }
+
+    .previewImg {
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
+    }
+
+    .slider {
+        --divider-color: ${({ theme }) => theme.palette.primary.main};
+        --default-handle-color: ${({ theme }) => theme.palette.primary.main};
+        --handle-position-start: 25%;
     }
 `;
 
@@ -43,7 +56,7 @@ export const PreviewContainer = styled.div`
     position: relative;
     width: 100%;
 
-    .phone-preview {
+    .phonePreview {
         z-index: 2;
         position: absolute;
         right: 0;
@@ -51,7 +64,7 @@ export const PreviewContainer = styled.div`
         width: 15%;
     }
 
-    .tablet-preview {
+    .tabletPreview {
         z-index: 1;
         position: absolute;
         right: 5%;
@@ -59,7 +72,7 @@ export const PreviewContainer = styled.div`
         width: 30%;
     }
 
-    .laptop-preview {
+    .laptopPreview {
         left: 0;
         bottom: 0;
         width: 90%;

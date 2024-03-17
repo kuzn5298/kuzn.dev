@@ -2,6 +2,7 @@ import React, { useMemo } from 'react';
 import { graphql } from 'gatsby';
 import { Preview } from '@components/core';
 import Header from './Header';
+
 import { WorkTemplateContainer } from './WorkTemplate.styled';
 
 const WorkTemplate = ({ data: { work } }) => {
@@ -11,9 +12,9 @@ const WorkTemplate = ({ data: { work } }) => {
         external,
         status,
         tags,
-        phonePreview,
-        tabletPreview,
-        laptopPreview,
+        phonePreviews,
+        tabletPreviews,
+        laptopPreviews,
         date,
     } = work.frontmatter;
 
@@ -31,9 +32,9 @@ const WorkTemplate = ({ data: { work } }) => {
             />
             <div className="scroll-container">
                 <Preview
-                    phonePreview={phonePreview.publicURL}
-                    tabletPreview={tabletPreview.publicURL}
-                    laptopPreview={laptopPreview.publicURL}
+                    phonePreviews={phonePreviews}
+                    tabletPreviews={tabletPreviews}
+                    laptopPreviews={laptopPreviews}
                 />
                 <section dangerouslySetInnerHTML={{ __html: work.html }} />
             </div>
@@ -60,15 +61,15 @@ export const pageQuery = graphql`
                 github
                 external
                 tags
-                phonePreview {
+                phonePreviews {
                     id
                     publicURL
                 }
-                tabletPreview {
+                tabletPreviews {
                     id
                     publicURL
                 }
-                laptopPreview {
+                laptopPreviews {
                     id
                     publicURL
                 }
