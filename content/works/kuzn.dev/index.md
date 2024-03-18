@@ -17,7 +17,7 @@ tags:
 
 ## Goal
 
-The main goal of creating my personal website is to provide information about my professional experience and skills in a visually appealing and informative manner. The site will include[ a brief overview of myself](/about#about ' a brief overview of myself'), [work experience](/about#expireance 'work experience'), [personal projects](/work 'personal projects'), and the [technology stack](/about#skill 'technology stack') I utilize in my work. This website aims to facilitate communication and the provision of information about my professional background to potential employers and clients.
+The main goal of creating my personal website is to provide information about my professional experience and skills in a visually appealing and informative manner. The site will include[ a brief overview of myself](/about#about ' a brief overview of myself'), [work experience](/about#experience 'work experience'), [personal projects](/works 'personal projects'), and the [technology stack](/about#skills 'technology stack') I utilize in my work. This website aims to facilitate communication and the provision of information about my professional background to potential employers and clients.
 
 ## Technology Stack
 
