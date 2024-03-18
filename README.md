@@ -13,29 +13,6 @@
   </a>
 </p>
 
-<style>
-    .preview-container {
-        position: relative;
-    }
-
-    .preview {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        animation: animate 10s ease-in-out infinite alternate;
-    }
-
-    @keyframes animate {
-        0%, 20% {
-            clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 0%);
-        }
-        80%, 100% {
-            clip-path: polygon(100% 0%, 100% 100%, 100% 100%, 100% 0%);
-        }
-    }
-</style>
-<div class="preview-container">
-    <img class="preview" src="https://raw.githubusercontent.com/kuzn5298/kuzn.dev/main/content/works/kuzn.dev/previews/laptop_dark_preview.png" alt="Dark mode" />
-    <img src="https://raw.githubusercontent.com/kuzn5298/kuzn.dev/main/content/works/kuzn.dev/previews/laptop_light_preview.png" alt="Light mode" />
-</div>
+| Light mode  | Dark mode |
+| - | - |
+| ![Light mode](https://raw.githubusercontent.com/kuzn5298/kuzn.dev/main/content/works/kuzn.dev/previews/laptop_light_preview.png) | ![Dark mode](https://raw.githubusercontent.com/kuzn5298/kuzn.dev/main/content/works/kuzn.dev/previews/laptop_dark_preview.png) |
