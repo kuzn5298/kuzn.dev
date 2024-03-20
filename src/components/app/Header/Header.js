@@ -4,7 +4,7 @@ import { Logo, ResumeButton } from '@components/custom';
 import { IconButton } from '@components/core';
 import { MenuIcon } from '@components/icons';
 import { useMedia } from '@hooks';
-import { goHome, goResumeFile } from '@utils';
+import { goHome } from '@utils';
 import Navigation from '../Navigation';
 import AppMenu from '../AppMenu';
 import { HeaderContainer, HeaderActions } from './Header.styled';
@@ -18,12 +18,12 @@ const Header = ({ className, elevation }) => {
             {!isMobile && (
                 <HeaderActions>
                     <Navigation />
-                    <ResumeButton onClick={goResumeFile} />
+                    <ResumeButton />
                 </HeaderActions>
             )}
             {isMobile && (
                 <AppMenu>
-                    <IconButton size="large" onClick={goResumeFile}>
+                    <IconButton size="large">
                         <MenuIcon />
                     </IconButton>
                 </AppMenu>
