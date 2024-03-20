@@ -26,3 +26,4 @@ export { default as DockerIcon } from './DockerIcon';
 export { default as MuiIcon } from './MuiIcon';
 export { default as StyledComponentsIcon } from './StyledComponentsIcon';
 export { default as NodejsIcon } from './NodejsIcon';
+export { default as LeetCodeIcon } from './LeetCodeIcon';

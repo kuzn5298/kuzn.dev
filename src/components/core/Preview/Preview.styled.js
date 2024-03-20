@@ -9,10 +9,11 @@ export const PreviewDeviceContainer = styled.div`
         background-size: cover;
         background-position: center;
         overflow: hidden;
+        background-color: black;
     }
 
     .laptopPreviewImgContainer {
-        top: 3.5%;
+        top: 3.6%;
         bottom: 10.5%;
         left: 9%;
         right: 9%;
@@ -20,15 +21,15 @@ export const PreviewDeviceContainer = styled.div`
 
     .phonePreviewImgContainer {
         top: 7%;
-        left: 5.7%;
-        right: 5.8%;
+        left: 5.3%;
+        right: 5.7%;
         bottom: 4%;
         border-radius: 0 0 5% 5%;
     }
 
     .tabletPreviewImgContainer {
-        top: 4.3%;
-        bottom: 5.7%;
+        top: 4.2%;
+        bottom: 5.5%;
         left: 5%;
         right: 5.5%;
     }

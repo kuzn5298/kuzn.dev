@@ -1,8 +1,8 @@
 ---
 date: '2023-07-01T00:00:00.000Z'
 title: 'KUZN.DEV'
-version: 0.9
-status: '0.9'
+version: 1.0
+status: '1.0'
 github: 'https://github.com/kuzn5298/kuzn.dev'
 external: 'https://kuzn.dev'
 laptopPreviews: ['./previews/laptop_light_preview.png', './previews/laptop_dark_preview.png']

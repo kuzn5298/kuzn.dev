@@ -21,6 +21,7 @@ const defaultTheme = {
                 linkedin: '#0278b7',
                 instagram: '#ff1f4c',
                 email: '#a4a4a4',
+                leetcode: '#ffa116',
             },
         },
     },

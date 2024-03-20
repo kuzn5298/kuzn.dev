@@ -18,3 +18,7 @@ export const goAbout = () => {
 export const goWorkById = (id) => {
     navigate(`${APP_ROUTES.WORK}/${id}`);
 };
+
+export const goResumeFile = () => {
+    openURL('/resume.pdf');
+};
