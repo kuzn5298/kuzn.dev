@@ -35,4 +35,4 @@ Developing this application offers an opportunity to explore new libraries and r
 
 **[PWA (Progressive Web App)](https://web.dev/explore/progressive-web-apps)**: Web applications that provide a user experience comparable to native apps, thanks to the use of modern web technologies and progressive enhancements.
 
-\_Note: The main idea to improve programming skills and explore the capabilities of new technologies and their features.
+_Note: The main idea to improve programming skills and explore the capabilities of new technologies and their features._
