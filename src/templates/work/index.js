@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react';
 import { graphql } from 'gatsby';
-import { Preview } from '@components/core';
+import { DevicePreview } from '@components/custom';
 import Header from './Header';
 
 import { WorkTemplateContainer } from './WorkTemplate.styled';
@@ -18,6 +18,10 @@ const WorkTemplate = ({ data: { work } }) => {
         date,
     } = work.frontmatter;
 
+    const isDevicePreview = useMemo(
+        () => Boolean(phonePreviews ?? tabletPreviews ?? laptopPreviews),
+        [laptopPreviews, phonePreviews, tabletPreviews]
+    );
     const year = useMemo(() => date && new Date(date).getFullYear(), [date]);
 
     return (
@@ -31,11 +35,13 @@ const WorkTemplate = ({ data: { work } }) => {
                 year={year}
             />
             <div className="scroll-container">
-                <Preview
-                    phonePreviews={phonePreviews}
-                    tabletPreviews={tabletPreviews}
-                    laptopPreviews={laptopPreviews}
-                />
+                {isDevicePreview && (
+                    <DevicePreview
+                        phonePreviews={phonePreviews}
+                        tabletPreviews={tabletPreviews}
+                        laptopPreviews={laptopPreviews}
+                    />
+                )}
                 <section dangerouslySetInnerHTML={{ __html: work.html }} />
             </div>
         </WorkTemplateContainer>
@@ -61,6 +67,10 @@ export const pageQuery = graphql`
                 github
                 external
                 tags
+                preview {
+                    id
+                    publicURL
+                }
                 phonePreviews {
                     id
                     publicURL

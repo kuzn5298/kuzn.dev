@@ -11,7 +11,9 @@ const WorkSection = ({ title, items, ...props }) => {
         <SectionContainer alignCenter title={title} {...props}>
             <CardList>
                 {items.map((item) => {
-                    const previewUrl = getPreviewURL(item.frontmatter.laptopPreviews, themeId);
+                    const previewUrl =
+                        item.frontmatter.preview?.publicURL ??
+                        getPreviewURL(item.frontmatter.laptopPreviews, themeId);
 
                     return (
                         <Card

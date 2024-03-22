@@ -3,6 +3,7 @@ date: '2023-07-01T00:00:00.000Z'
 title: 'KUZN.DEV'
 version: 1.0
 status: '1.0'
+main: true
 github: 'https://github.com/kuzn5298/kuzn.dev'
 external: 'https://kuzn.dev'
 laptopPreviews: ['./previews/laptop_light_preview.png', './previews/laptop_dark_preview.png']
@@ -17,14 +18,14 @@ tags:
 
 ## Goal
 
-The main goal of creating my personal website is to provide information about my professional experience and skills in a visually appealing and informative manner. The site will include[ a brief overview of myself](/about#about ' a brief overview of myself'), [work experience](/about#experience 'work experience'), [personal projects](/works 'personal projects'), and the [technology stack](/about#skills 'technology stack') I utilize in my work. This website aims to facilitate communication and the provision of information about my professional background to potential employers and clients.
+The main goal of creating my personal website is to provide information about my professional experience and skills in a visually appealing and informative manner. The site will include[ a brief overview of myself](/about#about), [work experience](/about#experience), [personal projects](/works), and the [technology stack](/about#skills) I utilize in my work. This website aims to facilitate communication and the provision of information about my professional background to potential employers and clients.
 
 ## Technology Stack
 
-**[React](https://react.dev/ 'React')**: The primary tool in my work. React provides efficient and flexible means to create user interfaces, ensuring high performance and code modularity.
+**[React](https://react.dev/)**: The primary tool in my work. React provides efficient and flexible means to create user interfaces, ensuring high performance and code modularity.
 
-**[Gatsby](https://www.gatsbyjs.com/ 'Gatsby')**: A convenient tool for developing personal websites and blogs. Gatsby utilizes React to build static sites with fast load times and excellent search engine optimization.
+**[Gatsby](https://www.gatsbyjs.com/)**: A convenient tool for developing personal websites and blogs. Gatsby utilizes React to build static sites with fast load times and excellent search engine optimization.
 
-**[Styled-components](https://styled-components.com/ 'Styled-components')**: A convenient library for styling in JavaScript. Styled-components allows creating styles directly within components, enhancing code maintainability and readability.
+**[Styled-components](https://styled-components.com/)**: A convenient library for styling in JavaScript. Styled-components allows creating styles directly within components, enhancing code maintainability and readability.
 
 _Note: An additional goal was to learn the new-to-me Gatsby library, expanding my skills and capabilities in the realm of creating static websites._

@@ -97,7 +97,14 @@ export const pageQuery = graphql`
                 }
             }
         }
-        works: allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/content/works/" } }) {
+        works: allMarkdownRemark(
+            filter: {
+                fileAbsolutePath: { regex: "/content/works/" }
+                frontmatter: { main: { eq: true } }
+            }
+            sort: { frontmatter: { date: DESC } }
+            limit: 3
+        ) {
             nodes {
                 id
                 html
@@ -108,6 +115,10 @@ export const pageQuery = graphql`
                     status
                     github
                     external
+                    preview {
+                        id
+                        publicURL
+                    }
                     laptopPreviews {
                         id
                         publicURL

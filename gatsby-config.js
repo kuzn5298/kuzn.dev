@@ -14,7 +14,7 @@ require('dotenv').config({
 module.exports = {
     siteMetadata: {
         title: `Nikita Kuznetsov`,
-        description: `Nikita Kuznetsov`,
+        description: `Nikita Kuznetsov is a software engineer developing modern and user-friendly products on the Internet.`,
         siteUrl: `https://kuzn.dev/`,
     },
     plugins: [

@@ -18,7 +18,10 @@ const WorksPage = ({ data }) => {
             <Title>Works</Title>
             <CardList>
                 {works.map((item) => {
-                    const previewUrl = getPreviewURL(item.frontmatter.laptopPreviews, themeId);
+                    const previewUrl =
+                        item.frontmatter.preview?.publicURL ??
+                        getPreviewURL(item.frontmatter.laptopPreviews, themeId);
+
                     return (
                         <Card
                             key={item.id}
@@ -48,7 +51,10 @@ export default WorksPage;
 
 export const pageQuery = graphql`
     {
-        works: allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/content/works/" } }) {
+        works: allMarkdownRemark(
+            filter: { fileAbsolutePath: { regex: "/content/works/" } }
+            sort: { frontmatter: { date: DESC } }
+        ) {
             nodes {
                 id
                 html
@@ -59,6 +65,10 @@ export const pageQuery = graphql`
                     status
                     github
                     external
+                    preview {
+                        id
+                        publicURL
+                    }
                     laptopPreviews {
                         id
                         publicURL
