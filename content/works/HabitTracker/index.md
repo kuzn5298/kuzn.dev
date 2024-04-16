@@ -1,10 +1,11 @@
 ---
 date: '2024-03-22T00:00:00.000Z'
 title: 'Habit Tracker'
-version: 0.1
-status: 'Planning'
+version: 0.3
+status: 'In Progress'
 preview: './preview.jpg'
 github: 'https://github.com/kuzn5298/habit-tracker'
+external: 'https://habit.kuzn.dev/'
 description: 'The project aims to develop a cross-platform application to assist users in achieving their goals and forming positive habits.'
 tags:
     - React
@@ -23,15 +24,25 @@ The primary goal of this project is to develop a cross-platform application that
 
 Developing this application offers an opportunity to explore new libraries and refresh my knowledge of familiar technologies. I plan to use experimental React features that are likely to be included in the 19th version, learn about new JavaScript capabilities, modern browser APIs like [View Transition API](https://developer.mozilla.org/en-US/docs/Web/API/View_Transitions_API) and [Badging API](https://developer.mozilla.org/en-US/docs/Web/API/Badging_API).
 
-## Technology Stack:
+## Technology Stack
 
 **[React Canary](https://react.dev/blog/2023/05/03/react-canaries/)**: Experimental version of React for testing new features and improvements. This library is a main tool for creating dynamic user interfaces.
+
+**[React Router](https://reactrouter.com/)**: A library for routing in React web applications, enabling dynamic navigation and component rendering based on the current URL.
+
+**[React Hook Form](https://react-hook-form.com/)**: A library for building flexible and efficient forms in React applications using hooks. It simplifies form handling by providing easy-to-use hooks and utilities.
+
+**[React-i18next](https://react.i18next.com/)**: A powerful internationalization library for React applications that works seamlessly with i18next, offering a comprehensive solution for multi-language support.
+
+**[Zustand](https://zustand-demo.pmnd.rs/)**: A small and flexible state management library for React applications. It offers a simple and intuitive API to manage global state, making it easier to share and update state across components without the complexity of larger state management solutions like Redux.
 
 **[Firebase](https://firebase.google.com/)**: A cloud platform offering a wide range of services for developing and deploying web applications, including databases, authentication, and cloud storage.
 
 **[TypeScript](https://www.typescriptlang.org/)**: An extension of JavaScript with added static typing, which improving code stability and maintainability.
 
 **[Tailwind CSS](https://tailwindcss.com/)**: A modern CSS framework that simplifies the process of styling the user interface thanks to pre-created classes.
+
+**[shadcn/ui](https://ui.shadcn.com/)**: Beautifully designed components that you can copy and paste into your apps. Accessible. Customizable. Open Source.
 
 **[PWA (Progressive Web App)](https://web.dev/explore/progressive-web-apps)**: Web applications that provide a user experience comparable to native apps, thanks to the use of modern web technologies and progressive enhancements.
 
