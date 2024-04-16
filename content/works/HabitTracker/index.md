@@ -6,7 +6,7 @@ status: 'In Progress'
 preview: './preview.jpg'
 github: 'https://github.com/kuzn5298/habit-tracker'
 external: 'https://habit.kuzn.dev/'
-description: 'The project aims to develop a cross-platform application to assist users in achieving their goals and forming positive habits.'
+description: 'A cross-platform application to assist users in achieving their goals and forming positive habits.'
 tags:
     - React
     - Firebase
