@@ -1,23 +1,24 @@
 import React from 'react';
 import styled from 'styled-components';
 import { graphql } from 'gatsby';
-import { goWorkById, getPreviewURL } from '@utils';
+import { goProjectById, getPreviewURL } from '@utils';
 import { Card, CardList } from '@components/custom';
 import { useTheme } from '@hooks';
 
 const Title = styled.h2`
     color: ${({ theme }) => theme.palette.primary.main};
+    text-transform: uppercase;
 `;
 
-const WorksPage = ({ data }) => {
+const ProjectsPage = ({ data }) => {
     const { themeId } = useTheme();
-    const works = data.works.nodes;
+    const projects = data.projects.nodes;
 
     return (
         <div>
-            <Title>Works</Title>
+            <Title>Projects</Title>
             <CardList>
-                {works.map((item) => {
+                {projects.map((item) => {
                     const previewUrl =
                         item.frontmatter.preview?.publicURL ??
                         getPreviewURL(item.frontmatter.laptopPreviews, themeId);
@@ -33,7 +34,7 @@ const WorksPage = ({ data }) => {
                             status={item.frontmatter.status}
                             tags={item.frontmatter.tags}
                             date={item.frontmatter.date}
-                            onClick={() => goWorkById(item.id)}
+                            onClick={() => goProjectById(item.id)}
                         />
                     );
                 })}
@@ -42,17 +43,17 @@ const WorksPage = ({ data }) => {
     );
 };
 
-WorksPage.settings = {
-    title: 'Work',
-    backgroundTitle: 'Work',
+ProjectsPage.settings = {
+    title: 'Projects',
+    backgroundTitle: 'Projects',
 };
 
-export default WorksPage;
+export default ProjectsPage;
 
 export const pageQuery = graphql`
     {
-        works: allMarkdownRemark(
-            filter: { fileAbsolutePath: { regex: "/content/works/" } }
+        projects: allMarkdownRemark(
+            filter: { fileAbsolutePath: { regex: "/content/projects/" } }
             sort: { frontmatter: { date: DESC } }
         ) {
             nodes {

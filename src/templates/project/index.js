@@ -3,9 +3,9 @@ import { graphql } from 'gatsby';
 import { DevicePreview } from '@components/custom';
 import Header from './Header';
 
-import { WorkTemplateContainer } from './WorkTemplate.styled';
+import { ProjectTemplateContainer } from './ProjectTemplate.styled';
 
-const WorkTemplate = ({ data: { work } }) => {
+const ProjectTemplate = ({ data: { project } }) => {
     const {
         title,
         github,
@@ -16,7 +16,7 @@ const WorkTemplate = ({ data: { work } }) => {
         tabletPreviews,
         laptopPreviews,
         date,
-    } = work.frontmatter;
+    } = project.frontmatter;
 
     const isDevicePreview = useMemo(
         () => Boolean(phonePreviews ?? tabletPreviews ?? laptopPreviews),
@@ -25,7 +25,7 @@ const WorkTemplate = ({ data: { work } }) => {
     const year = useMemo(() => date && new Date(date).getFullYear(), [date]);
 
     return (
-        <WorkTemplateContainer>
+        <ProjectTemplateContainer>
             <Header
                 title={title}
                 github={github}
@@ -42,22 +42,22 @@ const WorkTemplate = ({ data: { work } }) => {
                         laptopPreviews={laptopPreviews}
                     />
                 )}
-                <section dangerouslySetInnerHTML={{ __html: work.html }} />
+                <section dangerouslySetInnerHTML={{ __html: project.html }} />
             </div>
-        </WorkTemplateContainer>
+        </ProjectTemplateContainer>
     );
 };
 
-WorkTemplate.settings = {
-    title: ({ data }) => data.work.frontmatter.title,
-    backgroundTitle: ({ data }) => data.work.frontmatter.title,
+ProjectTemplate.settings = {
+    title: ({ data }) => data.project.frontmatter.title,
+    backgroundTitle: ({ data }) => data.project.frontmatter.title,
 };
 
-export default WorkTemplate;
+export default ProjectTemplate;
 
 export const pageQuery = graphql`
     query ($id: String!) {
-        work: markdownRemark(id: { eq: $id }) {
+        project: markdownRemark(id: { eq: $id }) {
             html
             frontmatter {
                 date

@@ -1,7 +1,7 @@
 export const APP_ROUTES = {
     HOME: '/',
     ABOUT: '/about',
-    WORK: '/works',
+    PROJECTS: '/projects',
     CONTACT: '/contact',
     NOT_FOUND: '/404',
 };
@@ -12,8 +12,8 @@ export const NAVIGATION = [
         to: APP_ROUTES.ABOUT,
     },
     {
-        name: 'Work',
-        to: APP_ROUTES.WORK,
+        name: 'Projects',
+        to: APP_ROUTES.PROJECTS,
     },
     {
         name: 'Contact',

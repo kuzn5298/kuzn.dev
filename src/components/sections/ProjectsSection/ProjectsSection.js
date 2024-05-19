@@ -1,10 +1,10 @@
 import React from 'react';
 import { SectionContainer } from '@components/app';
-import { goWorkById, getPreviewURL } from '@utils';
+import { goProjectById, getPreviewURL } from '@utils';
 import { useTheme } from '@hooks';
 import { Card, CardList } from '../../custom';
 
-const WorkSection = ({ title, items, ...props }) => {
+const ProjectsSection = ({ title, items, ...props }) => {
     const { themeId } = useTheme();
 
     return (
@@ -26,7 +26,7 @@ const WorkSection = ({ title, items, ...props }) => {
                             status={item.frontmatter.status}
                             tags={item.frontmatter.tags}
                             date={item.frontmatter.date}
-                            onClick={() => goWorkById(item.id)}
+                            onClick={() => goProjectById(item.id)}
                         />
                     );
                 })}
@@ -35,4 +35,4 @@ const WorkSection = ({ title, items, ...props }) => {
     );
 };
 
-export default WorkSection;
+export default ProjectsSection;

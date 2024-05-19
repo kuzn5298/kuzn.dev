@@ -1,7 +1,12 @@
 import { graphql } from 'gatsby';
 import React from 'react';
 import styled from 'styled-components';
-import { AboutSection, ExperienceSection, SkillsSection, WorkSection } from '@components/sections';
+import {
+    AboutSection,
+    ExperienceSection,
+    SkillsSection,
+    ProjectsSection,
+} from '@components/sections';
 
 const AboutContainer = styled.div`
     display: flex;
@@ -17,9 +22,9 @@ const SECTIONS = {
         id: 'experience',
         title: 'Experience',
     },
-    WORK: {
-        id: 'work',
-        title: 'Work',
+    PROJECTS: {
+        id: 'projects',
+        title: 'Projects',
     },
     SKILLS: {
         id: 'skills',
@@ -39,7 +44,11 @@ const AboutPage = ({ data }) => (
             title={SECTIONS.EXPERIENCE.title}
             items={data?.experience?.nodes}
         />
-        <WorkSection id={SECTIONS.WORK.id} title={SECTIONS.WORK.title} items={data?.works?.nodes} />
+        <ProjectsSection
+            id={SECTIONS.PROJECTS.id}
+            title={SECTIONS.PROJECTS.title}
+            items={data?.projects?.nodes}
+        />
         <SkillsSection id={SECTIONS.SKILLS.id} title={SECTIONS.SKILLS.title} />
     </AboutContainer>
 );
@@ -56,9 +65,9 @@ const NAV_SECTIONS = [
         to: SECTIONS.EXPERIENCE.id,
     },
     {
-        id: SECTIONS.WORK.id,
-        name: SECTIONS.WORK.title,
-        to: SECTIONS.WORK.id,
+        id: SECTIONS.PROJECTS.id,
+        name: SECTIONS.PROJECTS.title,
+        to: SECTIONS.PROJECTS.id,
     },
     {
         id: SECTIONS.SKILLS.id,
@@ -97,9 +106,9 @@ export const pageQuery = graphql`
                 }
             }
         }
-        works: allMarkdownRemark(
+        projects: allMarkdownRemark(
             filter: {
-                fileAbsolutePath: { regex: "/content/works/" }
+                fileAbsolutePath: { regex: "/content/projects/" }
                 frontmatter: { main: { eq: true } }
             }
             sort: { frontmatter: { date: DESC } }

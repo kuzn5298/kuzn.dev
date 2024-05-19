@@ -10,12 +10,12 @@ const path = require('path');
  */
 exports.createPages = async ({ actions, graphql }) => {
     const { createPage } = actions;
-    const workTemplate = path.resolve(`src/templates/work/index.js`);
+    const projectTemplate = path.resolve(`src/templates/project/index.js`);
 
     const result = await graphql(`
         {
-            worksRemark: allMarkdownRemark(
-                filter: { fileAbsolutePath: { regex: "/content/works/" } }
+            projectsRemark: allMarkdownRemark(
+                filter: { fileAbsolutePath: { regex: "/content/projects/" } }
                 sort: { frontmatter: { date: DESC } }
                 limit: 1000
             ) {
@@ -31,12 +31,12 @@ exports.createPages = async ({ actions, graphql }) => {
         }
     `);
 
-    const works = result.data.worksRemark.edges;
+    const projects = result.data.projectsRemark.edges;
 
-    works.forEach(({ node }) => {
+    projects.forEach(({ node }) => {
         createPage({
-            path: `/works/${node.id}`,
-            component: workTemplate,
+            path: `/projects/${node.id}`,
+            component: projectTemplate,
             context: {
                 id: node.id,
             },

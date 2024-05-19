@@ -5,9 +5,25 @@ import { ContactForm } from '@components/custom';
 import { Button } from '@components/core';
 import { EMAIL_LINK } from '@constants';
 import { goHome } from '@utils';
+import styled from 'styled-components';
+
+const SentSectionContainer = styled(SectionContainer)`
+    gap: 1.5rem;
+
+    p {
+        margin: 0;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+
+        ${({ theme }) => theme.breakpoints.down('md')} {
+            display: block;
+        }
+    }
+`;
 
 const ContactPage = () => {
-    const [sent, setSent] = useState(false);
+    const [sent, setSent] = useState(true);
 
     const onSubmit = async (data) => {
         const { name, email, message } = data;
@@ -30,24 +46,20 @@ const ContactPage = () => {
 
     if (sent) {
         return (
-            <SectionContainer alignCenter title="Thank you!">
+            <SentSectionContainer alignCenter mobileAlignCenter justifyCenter title="Thank you!">
                 <p>
                     <span>
                         Thank you for reaching out! I&apos;ll try to respond within 3 business days!
-                    </span>
-                    <br />
+                    </span>{' '}
                     <span>
                         You can also connect with me through the social media links provided on this
                         website
                     </span>
                 </p>
-
-                <div>
-                    <Button border onClick={goHome}>
-                        Home
-                    </Button>
-                </div>
-            </SectionContainer>
+                <Button size="large" border onClick={goHome}>
+                    Home
+                </Button>
+            </SentSectionContainer>
         );
     }
 

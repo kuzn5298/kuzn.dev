@@ -15,8 +15,8 @@ export const goAbout = () => {
     navigate(APP_ROUTES.ABOUT);
 };
 
-export const goWorkById = (id) => {
-    navigate(`${APP_ROUTES.WORK}/${id}`);
+export const goProjectById = (id) => {
+    navigate(`${APP_ROUTES.PROJECTS}/${id}`);
 };
 
 export const goResumeFile = () => {

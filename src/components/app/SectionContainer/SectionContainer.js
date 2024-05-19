@@ -18,6 +18,10 @@ const SectionContainer = styled.section`
         justify-content: center;
     }
 
+    &.justify-center {
+        align-items: center;
+    }
+
     ${({ theme }) => theme.breakpoints.down('sm')} {
         padding-top: 5%;
         min-height: initial;
@@ -37,12 +41,22 @@ const SectionContainer = styled.section`
 const Title = styled.h2`
     margin: 0;
     color: ${({ theme }) => theme.palette.primary.main};
+    text-transform: uppercase;
 `;
 
-const Section = ({ title, children, alignCenter, mobileAlignCenter, className, ...props }) => (
+const Section = ({
+    title,
+    children,
+    alignCenter,
+    justifyCenter,
+    mobileAlignCenter,
+    className,
+    ...props
+}) => (
     <SectionContainer
         className={clsx(
             alignCenter && 'align-center',
+            justifyCenter && 'justify-center',
             mobileAlignCenter && 'mobile-align-center',
             className
         )}

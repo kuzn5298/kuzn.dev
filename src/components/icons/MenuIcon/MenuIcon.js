@@ -3,7 +3,7 @@ import SvgIcon from '../SvgIcon';
 
 const MenuIcon = (props) => (
     <SvgIcon {...props}>
-        <path d="M3 18v-2h18v2Zm0-5v-2h18v2Zm0-5V6h18v2Z" />
+        <path fill="currentColor" d="M3 4h18v2H3zm6 7h12v2H9zm-6 7h18v2H3z" />
     </SvgIcon>
 );
 
