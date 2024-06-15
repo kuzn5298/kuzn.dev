@@ -14,7 +14,7 @@ tags:
     - Tailwind CSS
 ---
 
-<img src="https://raw.githubusercontent.com/kuzn5298/kuzn.dev/main/content/works/HabitTracker/preview.jpg" alt="Working process" width="100%"/>
+<img src="https://raw.githubusercontent.com/kuzn5298/kuzn.dev/main/content/projects/HabitTracker/preview.jpg" alt="Working process" width="100%"/>
 
 ## Project Goal
 

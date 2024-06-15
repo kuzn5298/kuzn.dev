@@ -15,4 +15,4 @@
 
 | Light mode  | Dark mode |
 | - | - |
-| ![Light mode](https://raw.githubusercontent.com/kuzn5298/kuzn.dev/main/content/works/kuzn.dev/previews/laptop_light_preview.png) | ![Dark mode](https://raw.githubusercontent.com/kuzn5298/kuzn.dev/main/content/works/kuzn.dev/previews/laptop_dark_preview.png) |
+| ![Light mode](https://raw.githubusercontent.com/kuzn5298/kuzn.dev/main/content/projects/kuzn.dev/previews/laptop_light_preview.png) | ![Dark mode](https://raw.githubusercontent.com/kuzn5298/kuzn.dev/main/content/projects/kuzn.dev/previews/laptop_dark_preview.png) |
