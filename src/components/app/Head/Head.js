@@ -1,14 +1,27 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import { useTheme, useSiteMetadata } from '@hooks';
+import { useLocation } from '@reach/router';
+import { useSiteMetadata, useTheme } from '@hooks';
 
-const Head = ({ title, description, children }) => {
-    const { title: defaultTitle, description: defaultDescription } = useSiteMetadata();
+import Icon from '@images/logo.svg';
+
+const Head = ({ title, description, image, children, article }) => {
+    const {
+        title: defaultTitle,
+        description: defaultDescription,
+        image: defaultImage,
+        siteUrl,
+        twitterUsername,
+    } = useSiteMetadata();
     const { theme } = useTheme();
+    const { pathname } = useLocation();
 
     const seo = {
-        title: title || defaultTitle,
-        description: description || defaultDescription,
+        title: title ? `${title} | ${defaultTitle}` : defaultTitle,
+        description: description ?? defaultDescription,
+        image: `${siteUrl}${image ?? defaultImage}`,
+        url: `${siteUrl}${pathname ?? ``}`,
+        twitterUsername,
     };
 
     return (
@@ -17,6 +30,21 @@ const Head = ({ title, description, children }) => {
 
             <meta name="description" content={seo.description} />
             <meta name="theme-color" content={theme.palette.background.default} />
+            <link rel="icon" href={Icon} />
+
+            <meta property="og:title" content={seo.title} />
+            <meta property="og:description" content={seo.description} />
+            <meta property="og:url" content={seo.url} />
+            <meta property="og:image" content={seo.image} />
+            <meta property="og:type" content={article ? 'article' : 'website'} />
+
+            <meta name="twitter:title" content={seo.title} />
+            <meta name="twitter:description" content={seo.description} />
+            <meta name="twitter:url" content={seo.url} />
+            <meta name="twitter:image" content={seo.image} />
+            <meta name="twitter:card" content="summary_large_image" />
+            <meta name="twitter:creator" content={seo.twitterUsername} />
+
             {children}
         </Helmet>
     );

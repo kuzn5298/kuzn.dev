@@ -14,8 +14,11 @@ require('dotenv').config({
 module.exports = {
     siteMetadata: {
         title: `Nikita Kuznetsov`,
-        description: `Nikita Kuznetsov is a software engineer developing modern and user-friendly products on the Internet.`,
+        description:
+            'Nikita Kuznetsov is a software engineer specializing in developing modern and user-friendly products for the web.',
         siteUrl: `https://kuzn.dev/`,
+        image: '/og.png',
+        twitterUsername: '@kuzn5298',
     },
     plugins: [
         `gatsby-plugin-react-helmet`,
@@ -29,6 +32,7 @@ module.exports = {
                 name: `Nikita Kuznetsov`,
                 short_name: `Nikita Kuznetsov`,
                 start_url: `/`,
+                theme_color: '#1D1C1C',
                 background_color: `#1D1C1C`,
                 display: `standalone`,
                 icon: `src/images/logo.svg`,

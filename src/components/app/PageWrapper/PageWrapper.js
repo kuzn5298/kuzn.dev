@@ -4,12 +4,23 @@ import { PageProvider } from '@contexts/PageContext';
 import BackgroundTitle from '../BackgroundTitle';
 import Head from '../Head';
 import Layout from '../Layout';
+
 import { PageWrapperContainer } from './PageWrapper.styled';
 
 const PageWrapper = ({ element, props }) => {
     const { location, data } = props;
-    const { title, backgroundTitle, withLayout = true, sections } = element?.type?.settings ?? {};
+    const {
+        title,
+        description,
+        backgroundTitle,
+        withLayout = true,
+        sections,
+        image,
+        article = false,
+    } = element?.type?.settings ?? {};
     const actualTitle = _.isFunction(title) ? title(props) : title;
+    const actualDescription = _.isFunction(description) ? description(props) : description;
+    const actualImage = _.isFunction(image) ? image(props) : image;
     const actualBackgroundTitle = _.isFunction(backgroundTitle)
         ? backgroundTitle(props)
         : backgroundTitle;
@@ -24,7 +35,12 @@ const PageWrapper = ({ element, props }) => {
             }}
         >
             <PageWrapperContainer>
-                <Head title={actualTitle} />
+                <Head
+                    title={actualTitle}
+                    description={actualDescription}
+                    image={actualImage}
+                    article={article}
+                />
                 {withLayout ? <Layout>{element}</Layout> : element}
                 <BackgroundTitle title={actualBackgroundTitle} />
             </PageWrapperContainer>

@@ -1,6 +1,7 @@
 import React, { useMemo } from 'react';
 import { graphql } from 'gatsby';
 import { DevicePreview } from '@components/custom';
+import { getPreviewURL } from '@utils';
 import Header from './Header';
 
 import { ProjectTemplateContainer } from './ProjectTemplate.styled';
@@ -50,7 +51,15 @@ const ProjectTemplate = ({ data: { project } }) => {
 
 ProjectTemplate.settings = {
     title: ({ data }) => data.project.frontmatter.title,
+    description: ({ data }) => data.project.frontmatter.description,
     backgroundTitle: ({ data }) => data.project.frontmatter.title,
+    image: ({ data }) => {
+        return (
+            data.project.frontmatter.preview?.publicURL ??
+            getPreviewURL(data.project.frontmatter.laptopPreviews)
+        );
+    },
+    article: true,
 };
 
 export default ProjectTemplate;
@@ -62,6 +71,7 @@ export const pageQuery = graphql`
             frontmatter {
                 date
                 title
+                description
                 version
                 status
                 github

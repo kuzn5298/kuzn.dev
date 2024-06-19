@@ -1,11 +1,11 @@
-import { graphql } from 'gatsby';
 import React from 'react';
+import { graphql } from 'gatsby';
 import styled from 'styled-components';
 import {
     AboutSection,
     ExperienceSection,
-    SkillsSection,
     ProjectsSection,
+    SkillsSection,
 } from '@components/sections';
 
 const AboutContainer = styled.div`
