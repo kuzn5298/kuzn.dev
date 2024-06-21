@@ -1,7 +1,7 @@
 {
     "name": "kuzn.dev",
     "description": "Personal Website",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "author": {
         "email": "kuzn5298@gmail.com",
         "name": "Nikita Kuznetsov",
@@ -22,10 +22,9 @@
     "dependencies": {
         "@emailjs/browser": "^4.3.3",
         "@img-comparison-slider/react": "^8.0.2",
-        "babel-plugin-styled-components": "^2.1.4",
         "clsx": "^2.1.1",
         "dotenv": "^16.4.5",
-        "gatsby": "^5.13.5",
+        "gatsby": "^5.13.6",
         "gatsby-plugin-image": "^3.13.1",
         "gatsby-plugin-manifest": "^5.13.1",
         "gatsby-plugin-offline": "^6.13.2",
@@ -41,25 +40,26 @@
         "react": "^18.3.1",
         "react-dom": "^18.3.1",
         "react-helmet": "^6.1.0",
-        "react-hook-form": "^7.51.4",
+        "react-hook-form": "^7.52.0",
         "react-scroll": "^1.9.0",
         "styled-components": "^6.1.11"
     },
     "devDependencies": {
+        "babel-plugin-styled-components": "^2.1.4",
         "eslint": "^8.57.0",
         "eslint-config-airbnb": "^19.0.4",
         "eslint-config-node": "^4.1.0",
         "eslint-config-prettier": "^9.1.0",
         "eslint-import-resolver-alias": "^1.1.2",
         "eslint-plugin-import": "^2.29.1",
-        "eslint-plugin-jsx-a11y": "^6.8.0",
+        "eslint-plugin-jsx-a11y": "^6.9.0",
         "eslint-plugin-node": "^11.1.0",
         "eslint-plugin-prettier": "^5.1.3",
-        "eslint-plugin-react": "^7.34.1",
+        "eslint-plugin-react": "^7.34.3",
         "eslint-plugin-react-hooks": "^4.6.2",
         "husky": "^9.0.11",
-        "lint-staged": "^15.2.2",
-        "prettier": "^3.2.5"
+        "lint-staged": "^15.2.7",
+        "prettier": "^3.3.2"
     },
     "keywords": [
         "gatsby"

@@ -3,3 +3,4 @@ export * from './theme';
 export * from './social';
 export * from './skills';
 export * from './tools';
+export * from './app';

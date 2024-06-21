@@ -1,4 +1,4 @@
-import React, { createContext, useCallback, useLayoutEffect, useMemo, useRef } from 'react';
+import React, { createContext, useCallback, useEffect, useMemo, useRef } from 'react';
 
 export const SliderContext = createContext({});
 
@@ -29,7 +29,7 @@ export const SliderProvider = ({ children }) => {
         [onChangeValue]
     );
 
-    useLayoutEffect(() => {
+    useEffect(() => {
         onChangeValue(0);
         let animationId;
 

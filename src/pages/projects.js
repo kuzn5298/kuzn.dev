@@ -23,6 +23,8 @@ const ProjectsPage = ({ data }) => {
                         item.frontmatter.preview?.publicURL ??
                         getPreviewURL(item.frontmatter.laptopPreviews, themeId);
 
+                    const id = item.frontmatter?.id ?? item.id;
+
                     return (
                         <Card
                             key={item.id}
@@ -34,7 +36,7 @@ const ProjectsPage = ({ data }) => {
                             status={item.frontmatter.status}
                             tags={item.frontmatter.tags}
                             date={item.frontmatter.date}
-                            onClick={() => goProjectById(item.id)}
+                            onClick={() => goProjectById(id)}
                         />
                     );
                 })}
@@ -60,6 +62,7 @@ export const pageQuery = graphql`
                 id
                 html
                 frontmatter {
+                    id
                     date
                     title
                     version

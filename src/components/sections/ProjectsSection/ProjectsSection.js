@@ -15,6 +15,8 @@ const ProjectsSection = ({ title, items, ...props }) => {
                         item.frontmatter.preview?.publicURL ??
                         getPreviewURL(item.frontmatter.laptopPreviews, themeId);
 
+                    const id = item.frontmatter?.id ?? item.id;
+
                     return (
                         <Card
                             key={item.id}
@@ -26,7 +28,7 @@ const ProjectsSection = ({ title, items, ...props }) => {
                             status={item.frontmatter.status}
                             tags={item.frontmatter.tags}
                             date={item.frontmatter.date}
-                            onClick={() => goProjectById(item.id)}
+                            onClick={() => goProjectById(id)}
                         />
                     );
                 })}

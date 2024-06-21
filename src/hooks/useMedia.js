@@ -1,4 +1,5 @@
-import { useLayoutEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
+import { IS_BROWSER } from '@constants';
 import { useTheme } from './useTheme';
 
 export const useMedia = (queryInput) => {
@@ -7,11 +8,11 @@ export const useMedia = (queryInput) => {
 
     const mediaQuery = typeof queryInput === 'function' ? queryInput(theme) : queryInput;
     const query = mediaQuery.replace(/^@media( ?)/m, '');
-    const matchMedia = window.matchMedia ?? null;
+    const matchMedia = IS_BROWSER ? window.matchMedia : null;
 
     query.replace(/^@media( ?)/m, '');
 
-    useLayoutEffect(() => {
+    useEffect(() => {
         if (!matchMedia) {
             return undefined;
         }

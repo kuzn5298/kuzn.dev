@@ -1,8 +1,9 @@
 ---
+id: kuzn-dev
 date: '2023-07-01T00:00:00.000Z'
 title: 'KUZN.DEV'
-version: 1.0
-status: '1.0'
+version: 1.1
+status: '1.1'
 main: true
 github: 'https://github.com/kuzn5298/kuzn.dev'
 external: 'https://kuzn.dev'

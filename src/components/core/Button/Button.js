@@ -1,14 +1,15 @@
+/* eslint-disable react/require-default-props */
 import React from 'react';
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
 import { ButtonContainer } from './Button.styled';
 
 const Button = ({
-    startIcon: StartIcon,
-    endIcon: EndIcon,
+    startIcon: StartIcon = null,
+    endIcon: EndIcon = null,
     children,
-    size,
-    border,
+    size = 'medium',
+    border = false,
     className,
     ...props
 }) => (
@@ -24,13 +25,6 @@ Button.propTypes = {
     endIcon: PropTypes.element,
     size: PropTypes.oneOf(['small', 'medium', 'large']),
     border: PropTypes.bool,
-};
-
-Button.defaultProps = {
-    startIcon: null,
-    endIcon: null,
-    size: 'medium',
-    border: false,
 };
 
 export default Button;

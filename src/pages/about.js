@@ -118,6 +118,7 @@ export const pageQuery = graphql`
                 id
                 html
                 frontmatter {
+                    id
                     date
                     title
                     version

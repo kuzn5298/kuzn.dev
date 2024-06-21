@@ -1,8 +1,9 @@
+/* eslint-disable react/require-default-props */
 import React, { useCallback, useRef, useState } from 'react';
 import PropTypes from 'prop-types';
 import { TooltipContainer, TooltipTip } from './Tooltip.styled';
 
-const Tooltip = ({ children, className, enterDelay, direction, title }) => {
+const Tooltip = ({ children, className, enterDelay = 100, direction = 'top', title = null }) => {
     const timeout = useRef(null);
     const [active, setActive] = useState(false);
 
@@ -33,12 +34,6 @@ Tooltip.propTypes = {
     enterDelay: PropTypes.number,
     direction: PropTypes.oneOf(['bottom', 'left', 'right', 'top']),
     title: PropTypes.node,
-};
-
-Tooltip.defaultProps = {
-    enterDelay: 100,
-    direction: 'top',
-    title: null,
 };
 
 export default Tooltip;

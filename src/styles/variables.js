@@ -27,6 +27,11 @@ const variables = css`
             --header-width-padding: 1rem;
             --content-width-padding: 1rem;
         }
+
+        // colors for ssr
+        --background-color: ${({ theme }) => theme.palette.background.default};
+        --text-color: ${({ theme }) => theme.palette.text.primary};
+        --primary-color: ${({ theme }) => theme.palette.primary.main};
     }
 `;
 

@@ -1,3 +1,4 @@
+/* eslint-disable react/require-default-props */
 import React, { useMemo } from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
@@ -10,14 +11,14 @@ import ToolChip from '../ToolChip';
 const Card = ({
     title,
     description,
-    image,
+    image = '',
     github,
     external,
     status,
-    tags,
-    onClick,
-    position,
-    date,
+    tags = [],
+    onClick = () => {},
+    position = 'right',
+    date = '',
     ...props
 }) => {
     const handleAction = (url) => (e) => {
@@ -87,19 +88,6 @@ Card.propTypes = {
     onClick: PropTypes.func,
     position: PropTypes.oneOf(['left', 'right']),
     date: PropTypes.string,
-};
-
-Card.defaultProps = {
-    description: undefined,
-    image: '',
-    github: undefined,
-    external: undefined,
-    status: undefined,
-    tags: [],
-    // eslint-disable-next-line prettier/prettier
-    onClick: () => { },
-    position: 'right',
-    date: '',
 };
 
 export default Card;

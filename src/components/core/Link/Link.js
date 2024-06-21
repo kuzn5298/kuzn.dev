@@ -1,3 +1,5 @@
+/* eslint-disable react/require-default-props */
+import React from 'react';
 import PropTypes from 'prop-types';
 import { Link as GatsbyLink } from 'gatsby';
 import styled, { css } from 'styled-components';
@@ -48,12 +50,18 @@ const colorBlock = css`
     }}
 `;
 
-const Link = styled(GatsbyLink)`
+const LinkStyled = styled(GatsbyLink)`
     ${fontSizeBlock}
     ${colorBlock}
 
     text-transform: uppercase;
 `;
+
+const Link = ({ children = null, color = 'inherit', fontSize = 'medium', ...props }) => (
+    <LinkStyled color={color} fontSize={fontSize} {...props}>
+        {children}
+    </LinkStyled>
+);
 
 Link.propTypes = {
     children: PropTypes.node,
@@ -64,12 +72,6 @@ Link.propTypes = {
         PropTypes.string,
     ]),
     to: PropTypes.string,
-};
-
-Link.defaultProps = {
-    children: null,
-    color: 'inherit',
-    fontSize: 'medium',
 };
 
 export default Link;

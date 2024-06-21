@@ -10,3 +10,4 @@ export { default as SideBar } from './SideBar';
 export { default as AppMenu } from './AppMenu';
 export { default as SectionContainer } from './SectionContainer';
 export { default as SectionNav } from './SectionNav';
+export { default as ClientLoading } from './ClientLoading';

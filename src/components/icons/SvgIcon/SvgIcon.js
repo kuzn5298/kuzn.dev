@@ -1,9 +1,11 @@
+/* eslint-disable react/require-default-props */
+import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
 
 const fontSizeBlock = css`
-    ${({ size }) => {
-        switch (size) {
+    ${({ $fontSize }) => {
+        switch ($fontSize) {
             case 'inherit':
                 return css`
                     font-size: inherit;
@@ -22,7 +24,7 @@ const fontSizeBlock = css`
                 `;
             default:
                 return css`
-                    font-size: ${size};
+                    font-size: ${$fontSize};
                 `;
         }
     }}
@@ -47,7 +49,7 @@ const colorBlock = css`
     }}
 `;
 
-const SvgIcon = styled.svg`
+const SvgIconStyled = styled.svg`
     user-select: none;
     width: 1em;
     height: 1em;
@@ -59,6 +61,18 @@ const SvgIcon = styled.svg`
     ${colorBlock}
 `;
 
+const SvgIcon = ({
+    children = null,
+    color = 'inherit',
+    fontSize = 'inherit',
+    viewBox = '0 0 24 24',
+    ...props
+}) => (
+    <SvgIconStyled color={color} $fontSize={fontSize} viewBox={viewBox} {...props}>
+        {children}
+    </SvgIconStyled>
+);
+
 SvgIcon.propTypes = {
     children: PropTypes.node,
     className: PropTypes.string,
@@ -68,13 +82,6 @@ SvgIcon.propTypes = {
         PropTypes.string,
     ]),
     viewBox: PropTypes.string,
-};
-
-SvgIcon.defaultProps = {
-    children: null,
-    color: 'inherit',
-    fontSize: 'inherit',
-    viewBox: '0 0 24 24',
 };
 
 export default SvgIcon;

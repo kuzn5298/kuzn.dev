@@ -41,7 +41,7 @@ const PageWrapper = ({ element, props }) => {
                     image={actualImage}
                     article={article}
                 />
-                {withLayout ? <Layout>{element}</Layout> : element}
+                {withLayout ? <Layout pathname={location.pathname}>{element}</Layout> : element}
                 <BackgroundTitle title={actualBackgroundTitle} />
             </PageWrapperContainer>
         </PageProvider>

@@ -1,8 +1,8 @@
 import styled, { css } from 'styled-components';
 
 const sizeBlock = css`
-    ${({ size }) => {
-        switch (size) {
+    ${({ $size }) => {
+        switch ($size) {
             case 'inherit':
                 return css`
                     font-size: inherit;
@@ -21,15 +21,15 @@ const sizeBlock = css`
                 `;
             default:
                 return css`
-                    font-size: ${size};
+                    font-size: ${$size};
                 `;
         }
     }}
 `;
 
 const colorBlock = css`
-    ${({ color }) => {
-        switch (color) {
+    ${({ $color }) => {
+        switch ($color) {
             case 'inherit':
                 return css`
                     color: inherit;
@@ -40,7 +40,7 @@ const colorBlock = css`
                 `;
             default:
                 return css`
-                    color: ${color};
+                    color: ${$color};
                 `;
         }
     }}
@@ -48,8 +48,8 @@ const colorBlock = css`
 
 const hoverColorBlock = css`
     &:hover {
-        ${({ hoverColor }) => {
-            switch (hoverColor) {
+        ${({ $hoverColor }) => {
+            switch ($hoverColor) {
                 case 'inherit':
                     return css`
                         color: inherit;
@@ -60,7 +60,7 @@ const hoverColorBlock = css`
                     `;
                 default:
                     return css`
-                        color: ${hoverColor};
+                        color: ${$hoverColor};
                     `;
             }
         }}

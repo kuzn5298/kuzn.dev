@@ -1,4 +1,4 @@
-import { THEME, DEFAULT_THEME_ID, THEME_LOCAL_STORAGE } from '@constants';
+import { THEME, DEFAULT_THEME_ID, THEME_LOCAL_STORAGE, IS_BROWSER } from '@constants';
 import storage from '@libs/storage';
 
 export const isValidThemeId = (themeId) => Object.values(THEME).includes(themeId);
@@ -13,7 +13,9 @@ export const getThemeIdFromLocalStorages = () => {
 };
 
 export const getSystemTheme = () => {
-    const isDarkTheme = window.matchMedia('(prefers-color-scheme: dark)')?.matches;
+    const isDarkTheme = IS_BROWSER
+        ? window.matchMedia('(prefers-color-scheme: dark)')?.matches
+        : false;
     return isDarkTheme ? THEME.DARK : null;
 };
 

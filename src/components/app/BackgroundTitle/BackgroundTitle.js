@@ -1,4 +1,5 @@
-import React, { useCallback, useLayoutEffect, useRef, useState } from 'react';
+import React, { useCallback, useRef, useState, useEffect } from 'react';
+import clsx from 'clsx';
 import {
     BackgroundTitleContainer,
     BackgroundTitle as BackgroundTitleStyle,
@@ -23,24 +24,18 @@ const BackgroundTitle = ({ title }) => {
         }
     }, []);
 
-    const isMounted = useRef(false);
-
-    useLayoutEffect(() => {
+    useEffect(() => {
         setTimeout(() => {
             handleResize();
-            isMounted.current = true;
         }, 500);
-    }, [handleResize]);
 
-    useLayoutEffect(() => {
-        if (isMounted.current) {
-            handleResize();
-        }
+        return () => {
+            setFontSize();
+        };
     }, [title, handleResize]);
 
-    useLayoutEffect(() => {
+    useEffect(() => {
         window.addEventListener('resize', handleResize);
-
         return () => {
             window.removeEventListener('resize', handleResize);
         };
@@ -54,7 +49,7 @@ const BackgroundTitle = ({ title }) => {
         <BackgroundTitleContainer ref={containerRef}>
             <BackgroundTitleStyle
                 ref={titleRef}
-                className="title"
+                className={clsx('title', fontSize && 'opacity-transition')}
                 style={{ fontSize, opacity: fontSize ? 1 : 0 }}
             >
                 {title}

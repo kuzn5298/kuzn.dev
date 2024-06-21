@@ -48,6 +48,7 @@ const NotFoundPage = () => (
 
 NotFoundPage.settings = {
     title: '404',
+    image: '/404.png',
     description:
         'Sorry, the page you are looking for could not be found. Please return to the homepage to continue your journey on my site.',
     withLayout: false,

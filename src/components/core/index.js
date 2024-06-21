@@ -5,3 +5,4 @@ export { default as Tooltip } from './Tooltip';
 export { default as Chip } from './Chip';
 export { default as Input } from './Input';
 export { default as Textarea } from './Textarea';
+export { default as Spinner } from './Spinner';

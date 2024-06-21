@@ -23,6 +23,7 @@ exports.createPages = async ({ actions, graphql }) => {
                     node {
                         id
                         frontmatter {
+                            id
                             title
                         }
                     }
@@ -34,8 +35,9 @@ exports.createPages = async ({ actions, graphql }) => {
     const projects = result.data.projectsRemark.edges;
 
     projects.forEach(({ node }) => {
+        const id = node?.frontmatter?.id ?? node.id;
         createPage({
-            path: `/projects/${node.id}`,
+            path: `/projects/${id}`,
             component: projectTemplate,
             context: {
                 id: node.id,

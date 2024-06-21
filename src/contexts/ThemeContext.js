@@ -1,4 +1,4 @@
-import React, { createContext, useState, useCallback, useMemo } from 'react';
+import React, { createContext, useState, useCallback, useMemo, useEffect } from 'react';
 import { ThemeProvider as StyledThemeProvider } from 'styled-components';
 import { THEME } from '@constants';
 import { GlobalStyle, darkTheme, lightTheme } from '@styles';
@@ -7,7 +7,12 @@ import { getUsedThemeId, isValidThemeId, setThemeIdToLocalStorages } from '@util
 export const ThemeContext = createContext({});
 
 export const ThemeProvider = ({ children }) => {
-    const [themeId, setThemeId] = useState(getUsedThemeId);
+    const [themeId, setThemeId] = useState(THEME.DARK);
+
+    useEffect(() => {
+        const clientThemeId = getUsedThemeId();
+        setThemeId(clientThemeId);
+    }, []);
 
     const theme = useMemo(() => {
         switch (themeId) {

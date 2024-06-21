@@ -8,7 +8,7 @@ export const SkillIconContainer = styled.span`
     cursor: pointer;
 
     &:hover {
-        color: ${({ hoverColor }) => hoverColor};
+        color: ${({ $hoverColor }) => $hoverColor};
     }
 
     .icon {

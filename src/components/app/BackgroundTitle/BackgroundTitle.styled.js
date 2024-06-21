@@ -22,5 +22,8 @@ export const BackgroundTitle = styled.span`
     font-weight: 900;
     line-height: 0.75;
     opacity: 0;
-    transition: opacity 1s ease;
+
+    &.opacity-transition {
+        transition: opacity 2s ease;
+    }
 `;

@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { useMedia, usePage, useScrollPosition } from '@hooks';
 import Main from '../Main';
 import Header from '../Header';
@@ -8,11 +8,15 @@ import { LayoutContainer } from './Layout.styled';
 
 const MAIN_CONTAINER_ID = 'mainContainer';
 
-const Layout = ({ children }) => {
+const Layout = ({ children, pathname }) => {
     const mainRef = useRef(null);
     const scrollPosition = useScrollPosition(mainRef);
     const isMobile = useMedia((theme) => theme.breakpoints.down('sm'));
     const { sections } = usePage();
+
+    useEffect(() => {
+        mainRef.current?.scrollTo(0, 0);
+    }, [pathname]);
 
     return (
         <LayoutContainer>
