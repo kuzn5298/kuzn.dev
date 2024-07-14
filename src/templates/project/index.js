@@ -53,9 +53,7 @@ ProjectTemplate.settings = {
     title: ({ data }) => data.project.frontmatter.title,
     description: ({ data }) => data.project.frontmatter.description,
     backgroundTitle: ({ data }) => data.project.frontmatter.title,
-    image: ({ data }) =>
-        data.project.frontmatter.preview?.publicURL ??
-        getPreviewURL(data.project.frontmatter.laptopPreviews),
+    image: ({ data }) => getPreviewURL(data.project.frontmatter.laptopPreviews),
     article: true,
 };
 
@@ -74,10 +72,6 @@ export const pageQuery = graphql`
                 github
                 external
                 tags
-                preview {
-                    id
-                    publicURL
-                }
                 phonePreviews {
                     id
                     publicURL

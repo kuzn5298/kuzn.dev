@@ -26,6 +26,12 @@ const CustomStyles = css`
             transform: scaleX(1);
         }
     }
+
+    .contains-task-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
 `;
 
 export default CustomStyles;

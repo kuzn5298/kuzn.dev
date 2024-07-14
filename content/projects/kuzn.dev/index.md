@@ -30,3 +30,15 @@ The main goal of creating my personal website is to provide information about my
 **[Styled-components](https://styled-components.com/)**: A convenient library for styling in JavaScript. Styled-components allows creating styles directly within components, enhancing code maintainability and readability.
 
 _Note: An additional goal was to learn the new-to-me Gatsby library, expanding my skills and capabilities in the realm of creating static websites._
+
+<details>
+  <summary>Version</summary>
+  
+**v 1.0**
+- [x] Main functionality
+**v 1.1**
+- [x] Fix SEO
+- [x] Fix SSR
+**v 1.2 (future)**
+- [ ] Add localization
+</details>

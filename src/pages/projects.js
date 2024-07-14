@@ -19,9 +19,7 @@ const ProjectsPage = ({ data }) => {
             <Title>Projects</Title>
             <CardList>
                 {projects.map((item) => {
-                    const previewUrl =
-                        item.frontmatter.preview?.publicURL ??
-                        getPreviewURL(item.frontmatter.laptopPreviews, themeId);
+                    const previewUrl = getPreviewURL(item.frontmatter.laptopPreviews, themeId);
 
                     const id = item.frontmatter?.id ?? item.id;
 
@@ -69,10 +67,6 @@ export const pageQuery = graphql`
                     status
                     github
                     external
-                    preview {
-                        id
-                        publicURL
-                    }
                     laptopPreviews {
                         id
                         publicURL

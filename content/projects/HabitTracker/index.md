@@ -2,11 +2,13 @@
 id: habit-tracker
 date: '2024-03-22T00:00:00.000Z'
 title: 'Habit Tracker'
-version: 0.3
+version: 0.8
 status: 'In Progress'
-preview: './preview.jpg'
 github: 'https://github.com/kuzn5298/habit-tracker'
 external: 'https://habit.kuzn.dev/'
+laptopPreviews: ['./previews/laptop_light_preview.png', './previews/laptop_dark_preview.png']
+tabletPreviews: ['./previews/tablet_light_preview.png', './previews/tablet_dark_preview.png']
+phonePreviews: ['./previews/phone_light_preview.png', './previews/phone_dark_preview.png']
 description: 'A cross-platform application to assist users in achieving their goals and forming positive habits.'
 tags:
     - React
@@ -14,8 +16,6 @@ tags:
     - TypeScript
     - Tailwind CSS
 ---
-
-<img src="https://raw.githubusercontent.com/kuzn5298/kuzn.dev/main/content/projects/HabitTracker/preview.jpg" alt="Working process" width="100%"/>
 
 ## Project Goal
 
@@ -48,3 +48,22 @@ Developing this application offers an opportunity to explore new libraries and r
 **[PWA (Progressive Web App)](https://web.dev/explore/progressive-web-apps)**: Web applications that provide a user experience comparable to native apps, thanks to the use of modern web technologies and progressive enhancements.
 
 _Note: The main idea to improve programming skills and explore the capabilities of new technologies and their features._
+
+<details>
+  <summary>Version</summary>
+  
+**v 0.8**
+
+-   [x] Main functionality
+
+**v 0.9 (future)**
+
+-   [ ] Add monthly habit type
+-   [ ] Add a habit reminder
+-   [ ] Add Badging API
+
+**v 1.0 (future)**
+
+-   [ ] Add animation + View Transition API
+
+</details>
