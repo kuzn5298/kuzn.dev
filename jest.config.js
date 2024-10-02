@@ -1,8 +1,11 @@
 module.exports = {
-    transform: {
-        '^.+\\.jsx?$': `<rootDir>/jest-preprocess.js`,
+    globals: {
+        __PATH_PREFIX__: '',
     },
     moduleNameMapper: {
+        '.+\\.(css|styl|less|sass|scss)$': 'identity-obj-proxy',
+        '.+\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
+            '<rootDir>/tests/__mocks__/file-mock.js',
         '^@components(.*)$': '<rootDir>/src/components$1',
         '^@contexts(.*)$': '<rootDir>/src/contexts$1',
         '^@content(.*)$': '<rootDir>/src/content$1',
@@ -12,14 +15,17 @@ module.exports = {
         '^@styles(.*)$': '<rootDir>/src/styles$1',
         '^@utils(.*)$': '<rootDir>/src/utils$1',
         '^@libs(.*)$': '<rootDir>/src/libs$1',
+        '^@tests(.*)$': '<rootDir>/tests$1',
     },
-    testPathIgnorePatterns: [`node_modules`, `\\.cache`, `<rootDir>.*/public`],
-    transformIgnorePatterns: [`node_modules/(?!(gatsby|gatsby-script|gatsby-link)/)`],
-    globals: {
-        __PATH_PREFIX__: '',
-    },
+    setupFiles: ['<rootDir>/tests/loadershim.js'],
+    setupFilesAfterEnv: ['<rootDir>/tests/setupTests.js'],
+    testEnvironment: 'jsdom',
+    testPathIgnorePatterns: ['node_modules', '\\.cache', '<rootDir>.*/public'],
     testEnvironmentOptions: {
         url: `http://localhost`,
     },
-    setupFiles: ['<rootDir>/test-setup.js'],
+    transform: {
+        '^.+\\.[jt]sx?$': '<rootDir>/tests/jest-preprocess.js',
+    },
+    transformIgnorePatterns: ['node_modules/(?!(gatsby)/)'],
 };

@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Chip Component correct custom props (snapshot test) 1`] = `
+<DocumentFragment>
+  <div
+    class="sc-aYaIB hwiwTJ"
+  >
+    Custom Chip
+  </div>
+</DocumentFragment>
+`;

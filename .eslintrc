@@ -48,7 +48,8 @@
                 ["@images", "./src/images"],
                 ["@styles", "./src/styles"],
                 ["@utils", "./src/utils"],
-                ["@libs", "./src/libs"]
+                ["@libs", "./src/libs"],
+                ["@tests", "./tests"]
             ]
         }
     }

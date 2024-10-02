@@ -1,3 +1,3 @@
-export const loader = {
+global.___loader = {
     enqueue: jest.fn(),
 };
