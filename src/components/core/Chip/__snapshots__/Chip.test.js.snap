@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Chip Component correct custom props (snapshot test) 1`] = `
+exports[`<Chip /> should render a chip with different props (snapshot test) 1`] = `
 <DocumentFragment>
   .c0 {
   font-size: 0.75rem;
@@ -14,7 +14,7 @@ exports[`Chip Component correct custom props (snapshot test) 1`] = `
 <div
     class="c0"
   >
-    Custom Chip
+    Test Chip
   </div>
 </DocumentFragment>
 `;

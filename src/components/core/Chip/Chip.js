@@ -23,7 +23,10 @@ const sizeBlock = css`
                     padding: 0.5rem 1rem;
                 `;
             default:
-                return undefined;
+                return css`
+                    font-size: inherit;
+                    padding: inherit;
+                `;
         }
     }}
 `;
