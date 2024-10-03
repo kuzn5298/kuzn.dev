@@ -2,8 +2,17 @@
 
 exports[`Chip Component correct custom props (snapshot test) 1`] = `
 <DocumentFragment>
-  <div
-    class="sc-aYaIB hwiwTJ"
+  .c0 {
+  font-size: 0.75rem;
+  padding: 0.125rem 0.25rem;
+  background-color: rgba(158, 158, 158, 0.2);
+  border-left: 3px solid #03a9f4;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+<div
+    class="c0"
   >
     Custom Chip
   </div>
