@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Input /> should render an input with different props (snapshot test) 1`] = `
+<DocumentFragment>
+  .c0 {
+  display: inline-block;
+  overflow: hidden;
+}
+
+.c0 .input {
+  background-color: transparent;
+  outline: 0;
+  border: 0;
+  margin: 0;
+  padding: 1rem 1.5rem;
+  background-color: #cdcdcd;
+  box-sizing: border-box;
+  border: 2px solid #cdcdcd;
+  width: 100%;
+}
+
+.c0 .input.error-container {
+  border-color: #e53935;
+}
+
+.c0 .input:focus {
+  border-color: #03a9f4;
+}
+
+.c0 .error {
+  color: #e53935;
+}
+
+<div
+    class="c0"
+  >
+    <input
+      class="input error-container"
+      placeholder="Snapshot test"
+    />
+    <div
+      class="error"
+    >
+      This is an error
+    </div>
+  </div>
+</DocumentFragment>
+`;

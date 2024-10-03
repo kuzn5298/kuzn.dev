@@ -77,10 +77,8 @@ const ChipStyled = styled.div`
     white-space: nowrap;
 `;
 
-const Chip = ({ children = null, color = 'primary', size = 'medium', borderColor, ...props }) => (
-    <ChipStyled $color={color} $size={size} $borderColor={borderColor} {...props}>
-        {children}
-    </ChipStyled>
+const Chip = ({ color = 'primary', size = 'medium', borderColor, ...props }) => (
+    <ChipStyled $color={color} $size={size} $borderColor={borderColor} {...props} />
 );
 
 Chip.propTypes = {

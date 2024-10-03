@@ -5,11 +5,15 @@ import { render } from '@testing-library/react';
 import Button from './Button';
 
 describe('<Button />', () => {
+    it('should render component', () => {
+        const { getByRole } = render(wrapWithTheme(<Button>Click me</Button>));
+        expect(getByRole('button')).toBeInTheDocument();
+    });
+
     it('should render component with default props', () => {
         const { getByRole } = render(wrapWithTheme(<Button>Click me</Button>));
         const buttonElement = getByRole('button');
 
-        expect(buttonElement).toBeInTheDocument();
         expect(buttonElement).not.toHaveClass('border');
         expect(buttonElement).toHaveTextContent('Click me');
         expect(buttonElement).toHaveStyle({
@@ -52,17 +56,17 @@ describe('<Button />', () => {
             )
         );
 
-        expect(getByTestId('small-button')).toHaveStyleRule({
+        expect(getByTestId('small-button')).toHaveStyle({
             gap: '0.5rem',
             padding: '0.25rem 0.75rem',
             fontSize: '0.75rem',
         });
-        expect(getByTestId('medium-button')).toHaveStyleRule({
+        expect(getByTestId('medium-button')).toHaveStyle({
             gap: '1rem',
             padding: '0.5rem 1.5rem',
             fontSize: '1rem',
         });
-        expect(getByTestId('large-button')).toHaveStyleRule({
+        expect(getByTestId('large-button')).toHaveStyle({
             gap: '1.5rem',
             padding: '0.75rem 2.25rem',
             fontSize: '1rem',

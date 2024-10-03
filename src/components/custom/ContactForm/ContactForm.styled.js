@@ -4,7 +4,6 @@ export const ContactFormContainer = styled.div`
     .form {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(auto, auto);
         grid-gap: 1rem;
 
         & > *:nth-child(1) {

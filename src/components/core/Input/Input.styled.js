@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 export const InputContainer = styled.div`
     display: inline-block;
-    width: ${({ fullWidth }) => (fullWidth ? '100%' : 'auto')};
     overflow: hidden;
 
     .input {

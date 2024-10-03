@@ -2,20 +2,25 @@ import React from 'react';
 import { rgba } from 'polished';
 import { lightTheme } from '@styles/theme';
 import { wrapWithTheme } from '@tests/helpers';
-import { render, screen } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import Chip from './Chip';
 
 describe('<Chip />', () => {
-    it('should render component with default props', () => {
-        render(wrapWithTheme(<Chip>Default Chip</Chip>));
-        const chipElement = screen.getByText(/default chip/i);
+    it('should render component', () => {
+        const { getByText } = render(wrapWithTheme(<Chip>Default Chip</Chip>));
+        expect(getByText(/default chip/i)).toBeInTheDocument();
+    });
 
-        expect(chipElement).toBeInTheDocument();
+    it('should render component with default props', () => {
+        const { getByText } = render(wrapWithTheme(<Chip>Default Chip</Chip>));
+        const chipElement = getByText(/default chip/i);
+
         expect(chipElement).toHaveStyle({
             backgroundColor: rgba(lightTheme.palette.primary.main, 0.75),
             fontSize: '1rem',
             padding: '0.25rem 0.5rem',
         });
+        expect(chipElement).toHaveTextContent(/default chip/i);
     });
 
     it('should render a correct chip color', () => {
