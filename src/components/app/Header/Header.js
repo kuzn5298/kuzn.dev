@@ -13,7 +13,10 @@ const Header = ({ className, elevation }) => {
     const isMobile = useMedia((theme) => theme.breakpoints.down('sm'));
 
     return (
-        <HeaderContainer className={clsx(elevation && 'elevation-2', className)}>
+        <HeaderContainer
+            data-testid="header"
+            className={clsx(elevation && 'elevation-2', className)}
+        >
             <Logo onClick={goHome} />
             {!isMobile && (
                 <HeaderActions>
@@ -23,7 +26,7 @@ const Header = ({ className, elevation }) => {
             )}
             {isMobile && (
                 <AppMenu>
-                    <IconButton size="large">
+                    <IconButton data-testid="menu-button" size="large">
                         <MenuIcon />
                     </IconButton>
                 </AppMenu>

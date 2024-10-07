@@ -6,8 +6,8 @@ import { getUsedThemeId, isValidThemeId, setThemeIdToLocalStorages } from '@util
 
 export const ThemeContext = createContext({});
 
-export const ThemeProvider = ({ children }) => {
-    const [themeId, setThemeId] = useState(THEME.DARK);
+export const ThemeProvider = ({ children, defaultTheme = THEME.DARK }) => {
+    const [themeId, setThemeId] = useState(defaultTheme);
 
     useEffect(() => {
         const clientThemeId = getUsedThemeId();

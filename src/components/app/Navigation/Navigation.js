@@ -4,7 +4,7 @@ import { Link } from '@components/core';
 import { NavigationContainer } from './Navigation.styled';
 
 const Navigation = () => (
-    <NavigationContainer>
+    <NavigationContainer data-testid="navigation">
         {NAVIGATION.map((nav) => (
             <Link key={nav.to} to={nav.to}>
                 {nav.name}

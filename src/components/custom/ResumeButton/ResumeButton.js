@@ -4,7 +4,12 @@ import { DownloadIcon } from '@components/icons';
 import { goResumeFile } from '@utils';
 
 const ResumeButton = (props) => (
-    <Button endIcon={<DownloadIcon />} onClick={goResumeFile} {...props}>
+    <Button
+        data-testid="resume-button"
+        endIcon={<DownloadIcon />}
+        onClick={goResumeFile}
+        {...props}
+    >
         Resume
     </Button>
 );
