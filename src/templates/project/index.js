@@ -20,7 +20,7 @@ const ProjectTemplate = ({ data: { project } }) => {
     } = project.frontmatter;
 
     const isDevicePreview = useMemo(
-        () => Boolean(phonePreviews ?? tabletPreviews ?? laptopPreviews),
+        () => Boolean(phonePreviews && tabletPreviews && laptopPreviews),
         [laptopPreviews, phonePreviews, tabletPreviews]
     );
     const year = useMemo(() => date && new Date(date).getFullYear(), [date]);

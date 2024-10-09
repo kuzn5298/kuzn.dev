@@ -3,7 +3,7 @@ id: habit-tracker
 date: '2024-03-22T00:00:00.000Z'
 title: 'Habit Tracker'
 version: 0.8
-status: 'In Progress'
+status: '0.8'
 github: 'https://github.com/kuzn5298/habit-tracker'
 external: 'https://habit.kuzn.dev/'
 laptopPreviews: ['./previews/laptop_light_preview.png', './previews/laptop_dark_preview.png']
