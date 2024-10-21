@@ -111,7 +111,7 @@ export const pageQuery = graphql`
                 fileAbsolutePath: { regex: "/content/projects/" }
                 frontmatter: { main: { eq: true } }
             }
-            sort: { frontmatter: { date: DESC } }
+            sort: { fields: [frontmatter___priority, frontmatter___date], order: [DESC, DESC] }
             limit: 3
         ) {
             nodes {

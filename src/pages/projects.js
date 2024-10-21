@@ -10,12 +10,16 @@ const Title = styled.h2`
     text-transform: uppercase;
 `;
 
+const Container = styled.div`
+    padding-bottom: 2rem;
+`;
+
 const ProjectsPage = ({ data }) => {
     const { themeId } = useTheme();
     const projects = data.projects.nodes;
 
     return (
-        <div>
+        <Container>
             <Title>Projects</Title>
             <CardList>
                 {projects.map((item) => {
@@ -39,7 +43,7 @@ const ProjectsPage = ({ data }) => {
                     );
                 })}
             </CardList>
-        </div>
+        </Container>
     );
 };
 
@@ -54,7 +58,7 @@ export const pageQuery = graphql`
     {
         projects: allMarkdownRemark(
             filter: { fileAbsolutePath: { regex: "/content/projects/" } }
-            sort: { frontmatter: { date: DESC } }
+            sort: { fields: [frontmatter___priority, frontmatter___date], order: [DESC, DESC] }
         ) {
             nodes {
                 id

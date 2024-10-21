@@ -3,9 +3,11 @@ id: rickle
 date: '2024-10-01T00:00:00.000Z'
 title: 'Rickle'
 version: 0.1
+priority: 2
 status: 'In Progress'
 laptopPreviews: ['./preview.png']
 github: 'https://github.com/kuzn5298/Rickle'
+external: 'https://rickle.kuzn.dev/'
 description: 'Rickle is a fun quiz game based on the Rick and Morty universe. Players can guess characters, places, and episodes, using hints to help them answer questions.'
 tags:
     - React

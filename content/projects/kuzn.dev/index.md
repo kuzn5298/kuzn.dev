@@ -5,6 +5,7 @@ title: 'KUZN.DEV'
 version: 1.1
 status: '1.1'
 main: true
+priority: 5
 github: 'https://github.com/kuzn5298/kuzn.dev'
 external: 'https://kuzn.dev'
 laptopPreviews: ['./previews/laptop_light_preview.png', './previews/laptop_dark_preview.png']
