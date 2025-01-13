@@ -3,7 +3,8 @@ id: conduit-angular
 date: '2025-01-13T00:00:00.000Z'
 title: 'Conduit'
 version: 0.1
-status: '0.1'
+status: 'In Progress'
+laptopPreviews: ['./preview.png']
 main: false
 priority: 3
 github: 'https://github.com/kuzn5298/conduit-angular'
