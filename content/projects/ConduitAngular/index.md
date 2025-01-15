@@ -2,12 +2,13 @@
 id: conduit-angular
 date: '2025-01-13T00:00:00.000Z'
 title: 'Conduit'
-version: 0.1
+version: 0.3
 status: 'In Progress'
 laptopPreviews: ['./preview.png']
 main: false
 priority: 3
 github: 'https://github.com/kuzn5298/conduit-angular'
+external: 'https://conduit.kuzn.dev/'
 description: 'A frontend for a blogging platform based on the Conduit RealWorld API, enabling users to create, manage, and engage with articles.'
 tags:
     - Angular
