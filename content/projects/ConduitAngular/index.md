@@ -2,10 +2,12 @@
 id: conduit-angular
 date: '2025-01-13T00:00:00.000Z'
 title: 'Conduit'
-version: 0.3
-status: 'In Progress'
-laptopPreviews: ['./preview.png']
-main: false
+version: 2.0
+status: '2.0'
+laptopPreviews: ['./previews/laptop_light_preview.png', './previews/laptop_dark_preview.png']
+tabletPreviews: ['./previews/tablet_light_preview.png', './previews/tablet_dark_preview.png']
+phonePreviews: ['./previews/phone_light_preview.png', './previews/phone_dark_preview.png']
+main: true
 priority: 3
 github: 'https://github.com/kuzn5298/conduit-angular'
 external: 'https://conduit.kuzn.dev/'
@@ -16,8 +18,6 @@ tags:
     - RxJS
 ---
 
-<img src="https://raw.githubusercontent.com/kuzn5298/kuzn.dev/main/content/projects/ConduitAngular/preview.png" alt="Conduit" width="100%"/>
-
 ## Project Goal
 
 The primary goal of this project is to create a frontend application for a blogging platform based on the [Conduit RealWorld API specification](https://realworld-docs.netlify.app/specifications/frontend/api/). The application will allow users to read, create, and manage articles, as well as engage with the content by commenting, liking, and following authors.
@@ -26,7 +26,7 @@ The primary goal of this project is to create a frontend application for a blogg
 
 ## Learning Objective
 
-This project is an opportunity to strengthen my skills in [Angular](https://angular.dev/) development, with a focus on modern features, [RxJS](https://rxjs.dev/) for reactive programming, and [Angular Router](https://angular.dev/guide/routing) for managing complex navigation flows. In the second version, I plan to redesign the application using [Angular Material](https://material.angular.io/) to improve user experience and learn to work with a component library.
+This project is an opportunity to strengthen my skills in [Angular](https://angular.dev/) development, with a focus on modern features, [RxJS](https://rxjs.dev/) for reactive programming, and [Angular Router](https://angular.dev/guide/routing) for managing complex navigation flows. In the second version, I plan to redesign the application using [Angular Material](https://material.angular.io/) to improve user experience and learn to work with a component library. I also want to try modern browser APIs, like the [View Transition API](https://developer.mozilla.org/en-US/docs/Web/API/View_Transitions_API).
 
 ## Key Features
 
@@ -35,6 +35,7 @@ This project is an opportunity to strengthen my skills in [Angular](https://angu
 -   **Interactive Feeds**: Display of personalized article feeds with filters for tags and author preferences.
 -   **Responsive Design**: Ensure the application looks and performs well across devices.
 -   **Component-Based Redesign**: Transition to Angular Material for improved UI/UX.
+-   **Page and Theme Transitions**: Add smooth transitions between pages and when changing the theme using the View Transition API.
 
 ## Technology Stack
 
@@ -54,9 +55,17 @@ _Note: This project will serve as both a portfolio piece and a valuable learning
   <summary>Version</summary>
   
 **v 1.0**
-- [] Main functionality
-**v 1.1 (future)**
-- [] Migration to Angular material
-**v 1.2 (future)**
-- [ ] Refactoring
+- [x] Main functionality
+**v 1.1**
+- [x] Migration to Angular material
+**v 1.2**
+- [x] Refactoring
+**v 1.5**
+- [x] zdd View Transition API
+**v 1.6**
+- [x] Add dark theme
+**v 1.9**
+- [x] Delete zone.js
+**v 2.0**
+- [x] Add mobile support
 </details>

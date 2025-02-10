@@ -25,7 +25,7 @@ The primary goal of this project is to develop a cross-platform application that
 
 ## Learning Objective
 
-Developing this application offers an opportunity to explore new libraries and refresh my knowledge of familiar technologies. I plan to use experimental React features that are likely to be included in the 19th version, learn about new JavaScript capabilities, modern browser APIs like [View Transition API](https://developer.mozilla.org/en-US/docs/Web/API/View_Transitions_API) and [Badging API](https://developer.mozilla.org/en-US/docs/Web/API/Badging_API).
+Developing this application offers an opportunity to explore new libraries and refresh my knowledge of familiar technologies. I plan to use experimental React features that are likely to be included in the 19th version, learn about new JavaScript capabilities.
 
 ## Technology Stack
 
@@ -62,10 +62,5 @@ _Note: The main idea to improve programming skills and explore the capabilities 
 
 -   [ ] Add monthly habit type
 -   [ ] Add a habit reminder
--   [ ] Add Badging API
-
-**v 1.0 (future)**
-
--   [ ] Add animation + View Transition API
 
 </details>
